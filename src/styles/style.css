@@ -1,13 +1,22 @@
 :root {
-  --dark-navy: #0b182c;
-  --navy: #12223d;
-  --light-navy: #233450;
-  --light-lime: #64ff93;
-  --white: #e9f1fc;
-  --bone-white: #d4ddf8;
-  --smoke: #8992ac;
-  --light-smoke: #acb5cf;
-  --lighter-smoke: #d0d8f3;
+  --dark-navy: #6F5D44;
+    /* A deep brown tone, replacing the dark navy */
+    --navy: #CCC5B7;
+    /* A soft beige, replacing the navy */
+    --light-navy: #E5BB89;
+    /* A warm light brown, replacing the light navy */
+    --light-lime: #F1DFC1;
+    /* A soft, muted cream, replacing the light lime */
+    --white: #FFFFFF;
+    /* White for text or primary elements, unchanged */
+    --bone-white: #F4EFE7;
+    /* A very light cream, replacing bone white */
+    --smoke: #A89C88;
+    /* A medium beige, replacing the smoke */
+    --light-smoke: #BFB8A7;
+    /* A lighter beige, replacing the light smoke */
+    --lighter-smoke: #DAD5C5;
+    /* A soft light beige, replacing the lighter smoke */
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
