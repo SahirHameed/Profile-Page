@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="copyright-box">
               <p className="copyright">
                 {contentData.footer.line_one}{" "}
-                <a href="https://github.com/KevinTrinh1227">
+                <a href="https://github.com/SahirHameed">
                   <strong>
                     {general.first_name} {general.middle_name}{" "}
                     {general.last_name}

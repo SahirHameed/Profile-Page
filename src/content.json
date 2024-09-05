@@ -1,35 +1,34 @@
 {
   "general": {
-    "first_name": "Kevin",
-    "middle_name": "Huy",
-    "last_name": "Trinh",
+    "first_name": "Sahir",
+    "last_name": "Hameed",
     "navbar_social_links": {
-      "github": "https://github.com/KevinTrinh1227",
+      "github": "https://github.com/SahirHameed",
       "resume": "/resume",
-      "linkedin": "https://www.linkedin.com/in/kevintrinh1227",
-      "email": "kevintrinh1227@gmail.com"
+      "linkedin": "https://www.linkedin.com/in/SahirHameed",
+      "email": "sahirhameed@utexas.edu"
     }
   },
   "repo_stats": {
     "section": {
       "enable_section": true
     },
-    "repo_link": "https://github.com/KevinTrinh1227/Reactfolio",
-    "api_link": "https://api.github.com/repos/KevinTrinh1227/Reactfolio"
+    "repo_link": "https://github.com/SahirHameed/Profile-Page",
+    "api_link": ""
   },
   "intro_screen": {
     "section": {
       "enable_section": true
     },
-    "main_header": "Hello, Kevin here.",
-    "main_subtitle": "I like to build stuff occasionally.",
+    "main_header": "Hey, Sahir here.",
+    "main_subtitle": "I touch grass sometimes :)",
     "intro_bio": [
-      "I'm currently a Freshman at the University of Houston,",
+      "I'm currently a Junior at the University of Texas at Austin,",
       "pursuing a Bachelor of Science in Computer Science.",
-      "I have a profound interest in machine learning, operating",
-      "systems, full-stack development, and everything in between."
+      "My passions lie in full-stack development, machine learning,",
+      "and AI, along with a drive to push the boundaries of what's possible."
     ],
-    "email_button": "Say hello to me!"
+    "email_button": "Let's Connect!"
   },
   "about_me": {
     "section": {
@@ -40,17 +39,12 @@
     },
     "headShotUrl": "../assets/portrait.png",
     "bio": [
-      "I am currently an undergraduate student at the University of Houston pursuing a Bachelor of Science in Computer Science. I recently completed an internship at the McNair Research Program at STMU, where I conducted research on high-level to low-level language translation under the guidance of my mentor, Arthur Hanna, Ph.D. Some of my curent goals include gaining practical experience and cultivating valuable connections that will contribute to my personal and professional growth.",
-      "I have a profound interest in various types of software development, including machine learning, operating systems, and full-stack development. I'm a huge enthusiast of desk setups and PCs. In my free time, I enjoy playing and analyzing chess games, thrifting, playing video games, strumming my guitar, and trying local foods."
-    ],
-    "skills_caption": "Some technologies I've been worked with:",
+    "I am currently an undergraduate student at the University of Texas at Austin pursuing a Bachelor of Science in Computer Science. I have recently completed internships at Medex Surgical, where I developed an inventory management system, and iCode, where I taught STEM education and assisted students with learning programming languages such as Java and Python. I am also a Research Fellow at the Autonomous Robotics Laboratory, where I work on robotics programming using GPT-4, Python, and C++.",
+    "I have a strong interest in full-stack development, machine learning, and AI. I'm constantly looking for opportunities to apply my technical skills to impactful projects, like creating a Chrome extension using OpenAI’s GPT-3.5 or integrating AI into real-world applications. Outside of my technical work, I enjoy working out, watching anime, and spending time with family and friends."
+  ],
+    "skills_caption": "",
     "skills": [
-      "JavaScript ES6+",
-      "React.js & Node.js",
-      "Python 3.x",
-      "HTML & CSS",
-      "MongoDB & MySQL",
-      "Linux & Windows OS"
+      
     ]
   },
   "academics": {
@@ -58,265 +52,159 @@
       "enable_section": false,
       "title": "~/Education",
       "navbar_name": "/Academics",
-      "description": "Courses that I have completed or am on track to complete. Current GPA: 3.24"
+      "description": "Courses that I have completed or am on track to complete. "
     },
     "general": {
-      "school": "St. Mary's University",
+      "school": "University of Texas at Austin",
       "degree": "Bachelor of Science in Computer Science",
-      "start_year": 2021,
-      "end_year": 2025
+      "start_year": 2022,
+      "end_year": 2026
     },
     "years": [
-      {
-        "year": 2021,
-        "semester": "Fall",
-        "courses": [
-          {
-            "abbreviation": "CS 1310",
-            "name": "C Programming I",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 1411",
-            "name": "Pre Calculus",
-            "credits": 4.0
-          },
-          {
-            "abbreviation": "EN 1311",
-            "name": "Rhetoric and Composition",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "PL 1301",
-            "name": "Introduction to Philosophy",
-            "credits": 3.0
-          }
-        ]
-      },
-      {
-        "year": 2022,
-        "semester": "Spring",
-        "courses": [
-          {
-            "abbreviation": "CS102",
-            "name": "C Programming II",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 3300",
-            "name": "Intro to Data Analytics Python Programming I",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 2412",
-            "name": "Calculus I",
-            "credits": 4.0
-          },
-          {
-            "abbreviation": "FYE 1301",
-            "name": "First Year Seminar",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 2412",
-            "name": "Multicultural American Lit",
-            "credits": 3.0
-          }
-        ]
-      },
-      {
-        "year": 2022,
-        "semester": "Fall",
-        "courses": [
-          {
-            "abbreviation": "CS 2315",
-            "name": "Algorithms and Data Structure",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 2313",
-            "name": "Object Oriented Programming I",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 2110",
-            "name": "Sophomore CS Seminar",
-            "credits": 1.0
-          },
-          {
-            "abbreviation": "CM 1341",
-            "name": "Intro to Human Communication",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "AR 1300",
-            "name": "Concepts in Visual Arts",
-            "credits": 3.0
-          }
-        ]
-      },
-      {
-        "year": 2023,
-        "semester": "Spring",
-        "courses": [
-          {
-            "abbreviation": "CS 2350",
-            "name": "Computer Architecture",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 2323",
-            "name": "Object Oritented Programming II",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "CS 4375",
-            "name": "Advanced Topics (Python Data Analytics)",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "MT 2323",
-            "name": "Discrete Math Structures",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "TH 1301",
-            "name": "Introduction to Thelogy",
-            "credits": 3.0
-          },
-          {
-            "abbreviation": "AC 2301",
-            "name": "Financial Accounting",
-            "credits": 3.0
-          }
-        ]
-      }
+      
     ]
   },
   "experience": {
-    "section": {
-      "enable_section": true,
-      "title": "~/Experience",
-      "navbar_name": "/Experience",
-      "description": "My current/past relevant experience. Click [here](/resume) to view my resume."
-    },
-    "experience_items": [
-      {
-        "organization": "McNair STMU",
-        "title": "Research Intern",
-        "start_date": "May 2023",
-        "end_date": " July 2023",
-        "description": [
-          "Conducted thorough undergraduate research on compiler design and high-level to low-level language translation.",
-          "Developed a lightweight translator by building a parser, lexer, and semantic analyzer module to convert custom code into assembly language for a virtual machine.",
-          "Collaborated closely with mentors to refine development skills and deepen understanding of language design principles and compiler design methodologies."
-        ]
-      },
-      {
-        "organization": "NP Engagement",
-        "title": "Web Developer Intern",
-        "start_date": "August 2022",
-        "end_date": "November 2022",
-        "description": [
-          "Maintained and updated numerous partner websites and online services, ensuring peak performance and relevance with proficiency in HTML, CSS, and JavaScript.",
-          "Integrated custom API scripts, optimized websites to fulfill unique client requirements and enhance user experience.",
-          "Utilized my proficiency in WordPress, crafting visually stunning and highly functional platforms tailored to precise client specifications, ensuring optimal user engagement.",
-          "Drove tangible business growth and significantly boosted client visibility and traffic by orchestrating cross-functional teamwork, applying my technical skills and strategic insights."
-        ]
-      }
-    ]
+  "section": {
+    "enable_section": true,
+    "title": "~/Experience",
+    "navbar_name": "/Experience",
+    "description": "My current/past relevant experience. Click [here](/resume) to view my resume."
   },
+  "experience_items": [
+    {
+      "organization": "Medex Surgical, Fort Worth, TX",
+      "title": "IT Intern",
+      "start_date": "May 2024",
+      "end_date": "Present",
+      "description": [
+        "Developed a sophisticated inventory management system, leveraging VBA and Javascript automation techniques to enhance data accuracy and streamline operational workflows.",
+        "Created clear and detailed technical documents and user manuals, ensuring smooth adoption and effective use of the new system."
+      ]
+    },
+    {
+      "organization": "iCode, Southlake, TX",
+      "title": "Teacher Assistant",
+      "start_date": "May 2024",
+      "end_date": "August 2024",
+      "description": [
+        "Promoted STEM education to 20+ students by teaching Java, Python, and HTML while effectively communicating complex technical concepts to individuals with varying skill levels.",
+        "Resolved a critical issue with the curriculum by quickly troubleshooting and adapting lesson plans, ensuring minimal disruption and allowing classes to continue smoothly."
+      ]
+    },
+    {
+      "organization": "Autonomous Robotics Laboratory, Austin, TX",
+      "title": "Research Fellow",
+      "start_date": "December 2023",
+      "end_date": "Present",
+      "description": [
+        "Coordinated group tasks and worked alongside five students on writing code using GPT-4, Python, and C++ that enables robots to guide humans to designated nodes, eliminating the need for hard-coded directions.",
+        "Gained hands-on experience with test equipment and applied troubleshooting skills to resolve technical issues, ensuring the reliability of the robotic system."
+      ]
+    }
+  ]
+},
   "projects": {
+  "section": {
+    "enable_section": true,
+    "title": "~/Projects",
+    "navbar_name": "/Projects",
+    "description": "Some of my most recent or past favorite creations or work."
+  },
+  "project_items": [
+    {
+      "use_git_api": false,
+      "api_github_repo_link": "",
+      "project_name": "Web Page Summarizer",
+      "description": "Developed a Chrome extension that utilizes OpenAI’s GPT-3.5-turbo to provide concise summaries of web pages, aimed at enhancing user productivity and information digestion. Implemented a user-friendly interface for inputting OpenAI API keys and viewing past summaries, laying the foundation for future enhancements and user feedback integration.",
+      "resources_used": [
+        "JavaScript",
+        "OpenAI API"
+      ],
+      "start_date": "August 2024",
+      "end_date": "",
+      "links": [
+        {
+          "href": "",
+          "icon": "FaGithub",
+          "data_tooltip": "Visit GitHub Repo"
+        }
+      ]
+    },
+    {
+      "use_git_api": false,
+      "api_github_repo_link": "",
+      "project_name": "Pantry Management System",
+      "description": "Built a full-stack pantry app with Next.js and Firebase, allowing users to manage inventory with real-time updates and secure authentication. Integrated LLaMA AI for smart recipe suggestions based on pantry contents, enhancing user experience with personalized recommendations. Designed a responsive UI for seamless interaction, leveraging JavaScript for dynamic functionality and Firebase for data synchronization.",
+      "resources_used": [
+        "Next.js",
+        "JavaScript",
+        "Firebase",
+        "LLaMA"
+      ],
+      "start_date": "July 2024",
+      "end_date": "August 2024",
+      "links": [
+        {
+          "href": "",
+          "icon": "FaGithub",
+          "data_tooltip": "Visit GitHub Repo"
+        }
+      ]
+    },
+    {
+      "use_git_api": false,
+      "api_github_repo_link": "",
+      "project_name": "Recycle Detection Software",
+      "description": "Developed a recycling detection algorithm by integrating YOLO-8, OpenCV, and GPT-4 to determine what materials are recyclable alongside a team with three peers. Directed system testing using Azure Kinect Video Stream, validating the successful real-time object classification and achieving 78% detection accuracy.",
+      "resources_used": [
+        "Python (YOLO-8)",
+        "OpenAI (GPT-4)"
+      ],
+      "start_date": "March 2023",
+      "end_date": "April 2023",
+      "links": [
+        {
+          "href": "",
+          "icon": "FaGithub",
+          "data_tooltip": "Visit GitHub Repo"
+        }
+      ]
+    }
+  ]
+}
+,
+  "languages": {
     "section": {
       "enable_section": true,
-      "title": "~/Projects",
-      "navbar_name": "/Projects",
-      "description": "Some of my most recent or past favorite creations or work."
+      "title": "~/Languages",
+      "navbar_name": "/Languages",
+      "description": "Programming languages, frameworks, and platforms I am proficient in."
     },
-    "project_items": [
-      {
-        "use_git_api": true,
-        "api_github_repo_link": "https://api.github.com/repos/KevinTrinh1227/Prize-Pick-Predictions",
-        "project_name": "STMU Yelp",
-        "description": "Application that showcases popular locations for college students specifically for St. Mary's students. collaborated with an 7 person team.",
-        "resources_used": [
-          "JavaScript",
-          "Python",
-          "Flask",
-          "React.js",
-          "CSS",
-          "MongoDB",
-          "HTML",
-          "Rest API"
-        ],
-        "start_date": "Sept 2022",
-        "end_date": "May 2023",
-        "links": [
-          {
-            "href": "https://github.com/KevinTrinh1227/Prize-Pick-Predictions",
-            "icon": "FaGithub",
-            "data_tooltip": "Visit GitHub Repo"
-          },
-          {
-            "href": "https://github.com/KevinTrinh1227/Prize-Pick-Predictions/archive/main.zip",
-            "icon": "FaDownload",
-            "data_tooltip": "Download Project"
-          }
-        ]
-      },
-      {
-        "use_git_api": true,
-        "api_github_repo_link": "https://api.github.com/repos/KevinTrinh1227/Hycord-Client",
-        "project_name": "Hycord Client",
-        "description": "Discord.py client that uses Hypixel & PlayerDB APIs to allow users to link and access in-game data. Simply, a versatile Hypixel Discord bot.",
-        "resources_used": ["HTML", "Discord.py", "Hypixel API"],
-        "start_date": "Dec 2022",
-        "end_date": "Present",
-        "links": [
-          {
-            "href": "https://www.hycord.net",
-            "icon": "FiExternalLink",
-            "data_tooltip": "Information Page"
-          },
-          {
-            "href": "https://github.com/KevinTrinh1227/Hycord-Client",
-            "icon": "FaGithub",
-            "data_tooltip": "Visit GitHub Repo"
-          },
-          {
-            "href": "https://github.com/KevinTrinh1227/Hycord-Client/archive/main.zip",
-            "icon": "FaDownload",
-            "data_tooltip": "Download Project"
-          }
-        ]
-      },
-      {
-        "use_git_api": true,
-        "api_github_repo_link": "https://api.github.com/repos/KevinTrinh1227/Reactfolio",
-        "project_name": "Reactfolio V2",
-        "description": "An e-portfolio built with React.js that utilizes GitHub API. Designed for public use and easy configuration. The second iteration of my website.",
-        "resources_used": [
-          "React.js",
-          "NVM",
-          "HTML & CSS",
-          "JavaScript",
-          "HTML",
-          "CSS"
-        ],
-        "start_date": "Sept 2023",
-        "end_date": "Present",
-        "links": [
-          {
-            "href": "https://github.com/KevinTrinh1227/Reactfolio",
-            "icon": "FaGithub",
-            "data_tooltip": "Visit GitHub Repo"
-          }
-        ]
-      }
+    "language_items": [
+      { "name": "Java (Spring Boot)", "icon": "/icons/java.png" },
+      { "name": "Python", "icon": "/icons/python.png" },
+      { "name": "C++", "icon": "/icons/cpp.png" },
+      { "name": "C", "icon": "/icons/c.png" },
+      { "name": "C#", "icon": "/icons/csharp.png" },
+      { "name": "JavaScript (React, Node)", "icon": "/icons/javascript.png" },
+      { "name": "CSS", "icon": "/icons/css.png" },
+      { "name": "HTML", "icon": "/icons/html.png" },
+      { "name": "Ruby", "icon": "/icons/ruby.png" },
+      { "name": "Swift", "icon": "/icons/swift.png" },
+      { "name": "SQL", "icon": "/icons/sql.png" }
+    ],
+    "framework_items": [
+      { "name": "VS Code", "icon": "/icons/vscode.png" },
+      { "name": "Eclipse", "icon": "/icons/eclipse.png" },
+      { "name": "IntelliJ IDEA", "icon": "/icons/intellij.png" },
+      { "name": "PyCharm", "icon": "/icons/pycharm.png" },
+      { "name": "Xcode", "icon": "/icons/xcode.png" },
+      { "name": "GitHub", "icon": "/icons/github.png" }
     ]
   },
   "footer": {
-    "line_one": "Built & designed by",
+    "line_one": "Designed by",
     "copyright_line": "All rights reserved."
   },
   "error_page": {

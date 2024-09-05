@@ -29,15 +29,20 @@ const Navbar = () => {
       text: contentData.projects.section.navbar_name,
       enable: contentData.projects.section.enable_section,
     },
+    {
+      id: "languages",
+      text: contentData.languages.section.navbar_name,
+      enable: contentData.languages.section.enable_section,
+    },
   ];
 
   return (
     <div className="navlist">
       <Fade cascade damping={0.2} triggerOnce={true}>
         <ul>
-          <li>
+          {/* <li>
             <a href="https://www.kevintrinh.dev">/Home</a>
-          </li>
+          </li> */}
           {sections.map((section) => {
             return section.enable ? (
               <li key={section.id}>
