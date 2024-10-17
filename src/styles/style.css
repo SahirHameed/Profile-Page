@@ -1,22 +1,22 @@
 :root {
-  --dark-navy: #6F5D44;
-    /* A deep brown tone, replacing the dark navy */
-    --navy: #454545;
-    /* A soft beige, replacing the navy */
-    --light-navy: #E5BB89;
-    /* A warm light brown, replacing the light navy */
-    --light-lime: #F1DFC1;
-    /* A soft, muted cream, replacing the light lime */
-    --white: #FFFFFF;
-    /* White for text or primary elements, unchanged */
-    --bone-white: #F4EFE7;
-    /* A very light cream, replacing bone white */
-    --smoke: #A89C88;
-    /* A medium beige, replacing the smoke */
-    --light-smoke: #BFB8A7;
-    /* A lighter beige, replacing the light smoke */
-    --lighter-smoke: #DAD5C5;
-    /* A soft light beige, replacing the lighter smoke */
+--dark-navy: #2E4053;
+  /* A sophisticated dark slate blue, to add depth and professionalism */
+  --navy: #34495E;
+  /* A deep blue-gray for a stable, balanced appearance */
+  --light-navy: #5D6D7E;
+  /* A medium-toned blue with a touch of gray, for warmth and neutrality */
+  --light-lime: #EAECEE;
+  /* A soft, cool off-white that contrasts well for text or backgrounds */
+  --white: #FFFFFF;
+  /* White for text or primary elements, unchanged */
+  --bone-white: #F7F9F9;
+  /* A very light gray-white for a clean, neutral background */
+  --smoke: #BDC3C7;
+  /* A versatile light gray, providing a gentle accent */
+  --light-smoke: #D5DBDB;
+  /* A subtle, cool light gray, for softer emphasis */
+  --lighter-smoke: #EBEDEF;
+  /* A very light gray that works well as a background or divider */
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;

@@ -185,12 +185,24 @@ const SideProjects = () => {
                           ? projectData[index]?.name || project.project_name
                           : project.project_name}
                       </h3>
-                      <p className="card-description">
+                      <ul className="card-description">
                         {project.use_git_api
-                          ? projectData[index]?.description ||
-                            project.description
-                          : project.description}
-                      </p>
+                          ? (
+                              projectData[index]?.description ||
+                              project.description
+                            )
+                              .split("\n")
+                              .map((bullet, i) => (
+                                <li key={i} style={{ marginBottom: "8px" }}>
+                                  {bullet}
+                                </li>
+                              ))
+                          : project.description.map((bullet, i) => (
+                              <li key={i} style={{ marginBottom: "8px" }}>
+                                {bullet}
+                              </li>
+                            ))}
+                      </ul>
                       <br />
                       <p className="resources-used">
                         {project.use_git_api
@@ -212,7 +224,11 @@ const SideProjects = () => {
                     <div className="card-footer">
                       <div className="post-author">
                         <span className="author">
-                          {project.start_date} - {project.end_date}
+                          {project.start_date}
+                          {project.end_date &&
+                          project.start_date !== project.end_date
+                            ? ` - ${project.end_date}`
+                            : ""}
                         </span>
                       </div>
                       <div className="post-date">

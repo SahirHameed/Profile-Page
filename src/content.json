@@ -20,7 +20,7 @@
     "section": {
       "enable_section": true
     },
-    "main_header": "Hey, Sahir here.",
+    "main_header": "Hey, Sahir here!",
     "main_subtitle": "I touch grass sometimes :)",
     "intro_bio": [
       "I'm currently a Junior at the University of Texas at Austin,",
@@ -64,59 +64,71 @@
       
     ]
   },
-  "experience": {
-  "section": {
-    "enable_section": true,
-    "title": "~/Experience",
-    "navbar_name": "/Experience",
-    "description": "My current/past relevant experience. Click [here](/resume) to view my resume."
+"experience": {
+    "section": {
+      "enable_section": true,
+      "title": "~/Experience",
+      "navbar_name": "/Experience",
+      "description": "My current/past relevant experience. Click [here](/resume) to view my resume."
+    },
+    "experience_items": [
+      {
+        "organization": "Headstarter, Fort Worth, TX",
+        "title": "Software Engineering Fellow",
+        "start_date": "July 2024",
+        "end_date": "September 2024",
+        "description": [
+          "Worked on five AI-focused projects, strengthening my skills in Python and JavaScript while applying concepts to real-world challenges and receiving direct feedback from experienced engineers.",
+          "Collaborated with diverse teams in five hackathons, building AI-driven solutions under tight deadlines."
+        ]
+      },
+      {
+        "organization": "Medex Surgical, Fort Worth, TX",
+        "title": "Software Engineering Intern",
+        "start_date": "May 2024",
+        "end_date": "August 2024",
+        "description": [
+          "Developed and deployed a VBA and JavaScript-based inventory system that eliminated manual logging and improved data accuracy by 30%, optimizing workflow efficiency across the company.",
+          "Authored technical documentation that streamlined system adoption and improved cross-team collaboration."
+        ]
+      },
+      {
+        "organization": "iCode, Southlake, TX",
+        "title": "Software Engineering Tutor",
+        "start_date": "May 2024",
+        "end_date": "August 2024",
+        "description": [
+          "Facilitated STEM education for 20+ student classrooms, adapting complex technical concepts in Java, Python, and HTML to meet individual learning needs, improving student performance and retention.",
+          "Identified and resolved a critical curriculum issue by adapting lesson plans, maintaining high student engagement, and preventing revenue loss."
+        ]
+      },
+      {
+        "organization": "Autonomous Robotics Laboratory, Austin, TX",
+        "title": "Research Fellow",
+        "start_date": "December 2023",
+        "end_date": "Present",
+        "description": [
+          "Led the development of embedded C++ and Python software for autonomous navigation, optimizing path-finding algorithms to reduce manual programming effort by 50%, driving innovation in team strategy.",
+          "Utilized test equipment and troubleshooting techniques to enhance system reliability and performance, applying knowledge of the full software development lifecycle during deployment."
+        ]
+      }
+    ]
   },
-  "experience_items": [
-    {
-      "organization": "Medex Surgical, Fort Worth, TX",
-      "title": "IT Intern",
-      "start_date": "May 2024",
-      "end_date": "Present",
-      "description": [
-        "Developed a sophisticated inventory management system, leveraging VBA and Javascript automation techniques to enhance data accuracy and streamline operational workflows.",
-        "Created clear and detailed technical documents and user manuals, ensuring smooth adoption and effective use of the new system."
-      ]
-    },
-    {
-      "organization": "iCode, Southlake, TX",
-      "title": "Teacher Assistant",
-      "start_date": "May 2024",
-      "end_date": "August 2024",
-      "description": [
-        "Promoted STEM education to 20+ students by teaching Java, Python, and HTML while effectively communicating complex technical concepts to individuals with varying skill levels.",
-        "Resolved a critical issue with the curriculum by quickly troubleshooting and adapting lesson plans, ensuring minimal disruption and allowing classes to continue smoothly."
-      ]
-    },
-    {
-      "organization": "Autonomous Robotics Laboratory, Austin, TX",
-      "title": "Research Fellow",
-      "start_date": "December 2023",
-      "end_date": "Present",
-      "description": [
-        "Coordinated group tasks and worked alongside five students on writing code using GPT-4, Python, and C++ that enables robots to guide humans to designated nodes, eliminating the need for hard-coded directions.",
-        "Gained hands-on experience with test equipment and applied troubleshooting skills to resolve technical issues, ensuring the reliability of the robotic system."
-      ]
-    }
-  ]
-},
   "projects": {
-  "section": {
-    "enable_section": true,
-    "title": "~/Projects",
-    "navbar_name": "/Projects",
-    "description": "Some of my most recent or past favorite creations or work."
-  },
-  "project_items": [
+    "section": {
+      "enable_section": true,
+      "title": "~/Projects",
+      "navbar_name": "/Projects",
+      "description": "Some of my most recent or past favorite creations or work."
+    },
+    "project_items": [
     {
       "use_git_api": false,
       "api_github_repo_link": "",
       "project_name": "Web Page Summarizer",
-      "description": "Developed a Chrome extension that utilizes OpenAI’s GPT-3.5-turbo to provide concise summaries of web pages, aimed at enhancing user productivity and information digestion. Implemented a user-friendly interface for inputting OpenAI API keys and viewing past summaries, laying the foundation for future enhancements and user feedback integration.",
+      "description": [
+        "Developed a Chrome extension using OpenAI's GPT-3.5 Turbo to generate web page summaries in under 5 seconds, improving productivity and information consumption. Optimized API performance for reduced latency and designed a user-friendly UI for API key input."
+      ],
       "resources_used": [
         "JavaScript",
         "OpenAI API"
@@ -125,7 +137,7 @@
       "end_date": "",
       "links": [
         {
-          "href": "",
+          "href": "https://github.com/SahirHameed/Web-Scraper-Summarizer",
           "icon": "FaGithub",
           "data_tooltip": "Visit GitHub Repo"
         }
@@ -135,7 +147,9 @@
       "use_git_api": false,
       "api_github_repo_link": "",
       "project_name": "Pantry Management System",
-      "description": "Built a full-stack pantry app with Next.js and Firebase, allowing users to manage inventory with real-time updates and secure authentication. Integrated LLaMA AI for smart recipe suggestions based on pantry contents, enhancing user experience with personalized recommendations. Designed a responsive UI for seamless interaction, leveraging JavaScript for dynamic functionality and Firebase for data synchronization.",
+      "description": [
+        "Built a full-stack pantry management app using Next.js and Firebase for real-time inventory tracking and recipe suggestions powered by LLaMA AI. Focused on a responsive UI and secure authentication to enhance user experience."
+      ],
       "resources_used": [
         "Next.js",
         "JavaScript",
@@ -146,7 +160,7 @@
       "end_date": "August 2024",
       "links": [
         {
-          "href": "",
+          "href": "https://github.com/SahirHameed/Pantry-Management",
           "icon": "FaGithub",
           "data_tooltip": "Visit GitHub Repo"
         }
@@ -156,7 +170,9 @@
       "use_git_api": false,
       "api_github_repo_link": "",
       "project_name": "Recycle Detection Software",
-      "description": "Developed a recycling detection algorithm by integrating YOLO-8, OpenCV, and GPT-4 to determine what materials are recyclable alongside a team with three peers. Directed system testing using Azure Kinect Video Stream, validating the successful real-time object classification and achieving 78% detection accuracy.",
+      "description": [
+        "Developed a recycling detection algorithm using YOLO-8, OpenCV, and GPT-4, achieving 78% detection accuracy. Led testing using Azure Kinect for real-time object classification."
+      ],
       "resources_used": [
         "Python (YOLO-8)",
         "OpenAI (GPT-4)"
@@ -165,42 +181,40 @@
       "end_date": "April 2023",
       "links": [
         {
-          "href": "",
+          "href": "https://github.com/milkman1015/FRI_One_Recycle_Detection",
           "icon": "FaGithub",
           "data_tooltip": "Visit GitHub Repo"
         }
       ]
     }
   ]
-}
-,
+},
   "languages": {
     "section": {
       "enable_section": true,
-      "title": "~/Languages",
-      "navbar_name": "/Languages",
-      "description": "Programming languages, frameworks, and platforms I am proficient in."
+      "title": "~/Skills",
+      "navbar_name": "/skills",
+      "description": "Programming languages and software I am proficient in."
     },
     "language_items": [
-      { "name": "Java (Spring Boot)", "icon": "/icons/java.png" },
-      { "name": "Python", "icon": "/icons/python.png" },
-      { "name": "C++", "icon": "/icons/cpp.png" },
-      { "name": "C", "icon": "/icons/c.png" },
-      { "name": "C#", "icon": "/icons/csharp.png" },
-      { "name": "JavaScript (React, Node)", "icon": "/icons/javascript.png" },
-      { "name": "CSS", "icon": "/icons/css.png" },
-      { "name": "HTML", "icon": "/icons/html.png" },
-      { "name": "Ruby", "icon": "/icons/ruby.png" },
-      { "name": "Swift", "icon": "/icons/swift.png" },
-      { "name": "SQL", "icon": "/icons/sql.png" }
+      { "name": "Java (Spring Boot)" },
+      { "name": "Python" },
+      { "name": "C++" },
+      { "name": "C" },
+      { "name": "JavaScript (React, Node)" },
+      { "name": "Ruby" },
+      { "name": "Swift" },
+      { "name": "SQL" }
     ],
     "framework_items": [
-      { "name": "VS Code", "icon": "/icons/vscode.png" },
-      { "name": "Eclipse", "icon": "/icons/eclipse.png" },
-      { "name": "IntelliJ IDEA", "icon": "/icons/intellij.png" },
-      { "name": "PyCharm", "icon": "/icons/pycharm.png" },
-      { "name": "Xcode", "icon": "/icons/xcode.png" },
-      { "name": "GitHub", "icon": "/icons/github.png" }
+      { "name": "AWS" },
+      { "name": "Docker" },
+      { "name": "TensorFlow" },
+      { "name": "Git" },
+      { "name": "Bash" },
+      { "name": "GCP" },
+      { "name": "Langchain" },
+      { "name": "Azure" }
     ]
   },
   "footer": {

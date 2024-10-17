@@ -15,10 +15,15 @@ const Navbar = () => {
       enable: contentData.about_me.section.enable_section,
     },
     {
-      id: "education",
-      text: contentData.academics.section.navbar_name,
-      enable: contentData.academics.section.enable_section,
+      id: "languages",
+      text: contentData.languages.section.navbar_name,
+      enable: contentData.languages.section.enable_section,
     },
+    // {
+    //   id: "education",
+    //   text: contentData.academics.section.navbar_name,
+    //   enable: contentData.academics.section.enable_section,
+    // },
     {
       id: "experience",
       text: contentData.experience.section.navbar_name,
@@ -28,11 +33,6 @@ const Navbar = () => {
       id: "projects",
       text: contentData.projects.section.navbar_name,
       enable: contentData.projects.section.enable_section,
-    },
-    {
-      id: "languages",
-      text: contentData.languages.section.navbar_name,
-      enable: contentData.languages.section.enable_section,
     },
   ];
 

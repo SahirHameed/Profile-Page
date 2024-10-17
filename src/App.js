@@ -31,10 +31,10 @@ function App() {
               <Linkbar />
               {intro_screen.section.enable_section && <Intro />}
               {about_me.section.enable_section && <About />}
+              {languages.section.enable_section && <Languages />}
               {academics.section.enable_section && <Education />}
               {experience.section.enable_section && <WorkExperience />}
               {projects.section.enable_section && <SideProjects />}
-              {languages.section.enable_section && <Languages />}{" "}
               {/* Add this line */}
               <Footer />
             </div>
