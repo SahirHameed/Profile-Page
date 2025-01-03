@@ -73,23 +73,13 @@
     },
     "experience_items": [
       {
-        "organization": "Headstarter, Fort Worth, TX",
-        "title": "Software Engineering Fellow",
-        "start_date": "July 2024",
-        "end_date": "September 2024",
-        "description": [
-          "Worked on five AI-focused projects, strengthening my skills in Python and JavaScript while applying concepts to real-world challenges and receiving direct feedback from experienced engineers.",
-          "Collaborated with diverse teams in five hackathons, building AI-driven solutions under tight deadlines."
-        ]
-      },
-      {
         "organization": "Medex Surgical, Fort Worth, TX",
         "title": "Software Engineering Intern",
         "start_date": "May 2024",
         "end_date": "August 2024",
         "description": [
-          "Developed and deployed a VBA and JavaScript-based inventory system that eliminated manual logging and improved data accuracy by 30%, optimizing workflow efficiency across the company.",
-          "Authored technical documentation that streamlined system adoption and improved cross-team collaboration."
+          "Designed and deployed an inventory management database system to store inventory using Visual Basic for Applications and JavaScript, reducing manual errors by 30% and saving 15 hours weekly for operations.",
+          "Streamlined management of over 1.5K hospital items, improving inventory tracking accuracy across 100+ hospitals by 40%."
         ]
       },
       {
@@ -98,8 +88,8 @@
         "start_date": "May 2024",
         "end_date": "August 2024",
         "description": [
-          "Facilitated STEM education for 20+ student classrooms, adapting complex technical concepts in Java, Python, and HTML to meet individual learning needs, improving student performance and retention.",
-          "Identified and resolved a critical curriculum issue by adapting lesson plans, maintaining high student engagement, and preventing revenue loss."
+          "Instructed lessons in Java, Python, and C++ to 20+ students, focusing on hands-on projects to build practical skills.",
+          "Identified and resolved a bug in the lesson progress tracking system, preventing a revenue loss of over $2K in profit.", "Maintained a 90% satisfaction rate by customizing lessons to meet individual needs and ensure active engagement."
         ]
       },
       {
@@ -108,8 +98,8 @@
         "start_date": "December 2023",
         "end_date": "Present",
         "description": [
-          "Led the development of embedded C++ and Python software for autonomous navigation, optimizing path-finding algorithms to reduce manual programming effort by 50%, driving innovation in team strategy.",
-          "Utilized test equipment and troubleshooting techniques to enhance system reliability and performance, applying knowledge of the full software development lifecycle during deployment."
+          "Collaborated in a team of 4 to develop a multi-robot human guidance system using Robot Operating System (ROS), Python, and C++, leveraging GPT-4o to enable robots to guide people throughout the laboratory building.",
+          "Tracked each robot’s real-time location using ROS, integrating it with structured GPT-4o prompts to deliver precise navigation and room directions within the building."
         ]
       }
     ]
@@ -125,9 +115,31 @@
     {
       "use_git_api": false,
       "api_github_repo_link": "",
+      "project_name": "Video Game Sales Prediction",
+      "description": [
+        "Worked in a team of 4 to develop a machine learning model using Python and Jupyter Notebook, aimed at predicting a game’s total global sales. Removed outliers, filled null values, and engineered new features using Pandas, NumPy, and Seaborn to uncover patterns driving global sales. Trained and optimized regression models through hyperparameter tuning, improving the R2 value by 83% from 0.24 to 0.44."
+      ],
+      "resources_used": [
+        "Python",
+        "Jupyter Notebook",
+        "scikit-learn"
+      ],
+      "start_date": "Nov 2024",
+      "end_date": "Dec 2024",
+      "links": [
+        {
+          "href": "https://github.com/SahirHameed/Video-Game-Sales-Prediction",
+          "icon": "FaGithub",
+          "data_tooltip": "Visit GitHub Repo"
+        }
+      ]
+    },
+    {
+      "use_git_api": false,
+      "api_github_repo_link": "",
       "project_name": "Web Page Summarizer",
       "description": [
-        "Developed a Chrome extension using OpenAI's GPT-3.5 Turbo to generate web page summaries in under 5 seconds, improving productivity and information consumption. Optimized API performance for reduced latency and designed a user-friendly UI for API key input."
+        "Developed a Chrome extension using JavaScript, HTML, and CSS, leveraging Open-AI’s GPT-3.5 Turbo to generate concise web page summaries. Created scripts to extract web page content and integrated Open-AI API for text summarization functionality."
       ],
       "resources_used": [
         "JavaScript",
@@ -148,7 +160,7 @@
       "api_github_repo_link": "",
       "project_name": "Pantry Management System",
       "description": [
-        "Built a full-stack pantry management app using Next.js and Firebase for real-time inventory tracking and recipe suggestions powered by LLaMA AI. Focused on a responsive UI and secure authentication to enhance user experience."
+        "Designed a full-stack application using Next.js, Firebase, and JavaScript for real-time pantry inventory tracking and secure user authentication. Integrated LLaMA AI to analyze inventory and provide tailored recipe suggestions for the user."
       ],
       "resources_used": [
         "Next.js",
@@ -171,7 +183,7 @@
       "api_github_repo_link": "",
       "project_name": "Recycle Detection Software",
       "description": [
-        "Developed a recycling detection algorithm using YOLO-8, OpenCV, and GPT-4, achieving 78% detection accuracy. Led testing using Azure Kinect for real-time object classification."
+        "Constructed a recycling detection algorithm in a team of 4, integrating YOLO-8, OpenCV, and GPT-4 to determine an object’s recyclability status. Led system testing using Azure Kinect video streams, achieving a detection accuracy of 78% on recyclable objects."
       ],
       "resources_used": [
         "Python (YOLO-8)",
