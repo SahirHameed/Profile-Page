@@ -64,9 +64,12 @@ const About = () => {
                 <span className="term-json__comma">, </span>
                 <span className="term-json__string">"Full-Stack Dev"</span>
                 <span className="term-json__comma">, </span>
+                <span className="term-json__string">"Claude"</span>
+                <span className="term-json__comma">, </span>
                 <span className="term-json__string">"Fitness"</span>
                 <span className="term-json__comma">, </span>
                 <span className="term-json__string">"Anime"</span>
+                
                 <span className="term-json__bracket">]</span>
               </div>
               <div className="term-json__brace">{'}'}</div>
