@@ -2,239 +2,285 @@
   "general": {
     "first_name": "Sahir",
     "last_name": "Hameed",
-    "navbar_social_links": {
+    "email": "sahirhameed@utexas.edu",
+    "location": "Fort Worth, Texas",
+    "resume_url": "/assets/Sahir_Hameed_Resume.pdf",
+    "social_links": {
       "github": "https://github.com/SahirHameed",
-      "resume": "/resume",
-      "linkedin": "https://www.linkedin.com/in/SahirHameed",
+      "linkedin": "https://www.linkedin.com/in/sahirhameed",
       "email": "sahirhameed@utexas.edu"
     }
   },
-  "repo_stats": {
-    "section": {
-      "enable_section": true
-    },
-    "repo_link": "https://github.com/SahirHameed/Profile-Page",
-    "api_link": ""
+  "hero": {
+    "enable_section": true,
+    "greeting": "Hey, I'm",
+    "name": "Sahir Hameed",
+    "narrative": "Working to improve myself every day.",
+    "sub_narrative": "Full-Stack & AI/ML Development",
+    "explore_prompt": "Scroll to explore",
+    "floating_cards": [
+      {
+        "id": "building",
+        "icon": "rocket",
+        "label": "What I'm Building",
+        "hint": "Currently at Lockheed Martin",
+        "href": "#experience"
+      },
+      {
+        "id": "made",
+        "icon": "lightbulb",
+        "label": "What I've Made",
+        "hint": "Projects & experiments",
+        "href": "#projects"
+      },
+      {
+        "id": "story",
+        "icon": "brain",
+        "label": "My Story",
+        "hint": "The journey so far",
+        "href": "#about"
+      },
+      {
+        "id": "connect",
+        "icon": "mail",
+        "label": "Let's Talk",
+        "hint": "Start a conversation",
+        "href": "#contact"
+      }
+    ]
   },
-  "intro_screen": {
-    "section": {
-      "enable_section": true
-    },
-    "main_header": "Hey, Sahir here!",
-    "main_subtitle": "I touch grass sometimes :)",
-    "intro_bio": [
-      "I'm currently a Junior at the University of Texas at Austin,",
-      "pursuing a Bachelor of Science in Computer Science.",
-      "My passions lie in full-stack development, machine learning,",
-      "and AI, along with a drive to push the boundaries of what's possible."
-    ],
-    "email_button": "Let's Connect!"
-  },
-  "about_me": {
-    "section": {
-      "enable_section": true,
-      "title": "~/About",
-      "navbar_name": "/About",
-      "description": "Brief information about me and some of my interests."
-    },
-    "headShotUrl": "../assets/portrait.png",
+  "about": {
+    "enable_section": true,
+    "section_id": "about",
+    "title": "My Story",
+    "subtitle": "The journey so far",
+    "portrait_url": "/assets/portrait.png",
     "bio": [
-    "I am currently an undergraduate student at the University of Texas at Austin pursuing a Bachelor of Science in Computer Science. I have recently completed internships at Medex Surgical, where I developed an inventory management system, and iCode, where I taught STEM education and assisted students with learning programming languages such as Java and Python. I am also a Research Fellow at the Autonomous Robotics Laboratory, where I work on robotics programming using GPT-4, Python, and C++.",
-    "I have a strong interest in full-stack development, machine learning, and AI. I'm constantly looking for opportunities to apply my technical skills to impactful projects, like creating a Chrome extension using OpenAI’s GPT-3.5 or integrating AI into real-world applications. Outside of my technical work, I enjoy working out, watching anime, and spending time with family and friends."
-  ],
-    "skills_caption": "",
-    "skills": [
-      
-    ]
-  },
-  "academics": {
-    "section": {
-      "enable_section": false,
-      "title": "~/Education",
-      "navbar_name": "/Academics",
-      "description": "Courses that I have completed or am on track to complete. "
-    },
-    "general": {
-      "school": "University of Texas at Austin",
-      "degree": "Bachelor of Science in Computer Science",
-      "start_year": 2022,
-      "end_year": 2026
-    },
-    "years": [
-      
-    ]
-  },
-"experience": {
-    "section": {
-      "enable_section": true,
-      "title": "~/Experience",
-      "navbar_name": "/Experience",
-      "description": "My current/past relevant experience. Click [here](/resume) to view my resume."
-    },
-    "experience_items": [
+      "I'm a Computer Science student at the University of Texas at Austin with a Minor in Business, currently working as a Data & AI Engineer at Lockheed Martin — building systems that actually matter for mission-critical defense infrastructure.",
+      "From architecting document automation systems to building Chrome extensions that think and training models to predict the unpredictable — every project taught me something new about turning complexity into clarity.",
+      "When I'm not coding, you'll find me working out, watching anime, or spending time with family and friends. I believe the best solutions come from curious minds that never stop exploring."
+    ],
+    "highlights": [
       {
-        "organization": "Medex Surgical, Fort Worth, TX",
+        "label": "Education",
+        "value": "Bachelor of Science in Computer Science, Minor in Business — UT Austin"
+      },
+      {
+        "label": "Current",
+        "value": "Data & AI Engineer @ Lockheed Martin"
+      },
+      {
+        "label": "Passion",
+        "value": "Building things that matter"
+      }
+    ]
+  },
+  "experience": {
+    "enable_section": true,
+    "section_id": "experience",
+    "title": "Journey",
+    "subtitle": "How I got here",
+    "items": [
+      {
+        "company": "Lockheed Martin",
+        "location": "Remote",
+        "title": "Data & AI Engineer",
+        "type": "Full-time",
+        "start_date": "May 2025",
+        "end_date": null,
+        "is_current": true,
+        "description": [
+          "Architecting a full-stack document lifecycle automation system using C# .NET, Python, and GitLab, implementing automated email notifications, archival workflows, and version-controlled repository storage for enterprise document management",
+          "Designed and deployed RESTful API integrations connecting SAP BusinessObjects WebI with GitLab repositories, enabling automated data extraction and migration for compliance and long-term storage",
+          "Developed Python automation scripts for data pipeline operations, backup procedures, and system integrations, reducing manual overhead by 20% and improving operational efficiency",
+          "Optimized SQL Server queries and restructured database schemas, improving application performance by 30% and reducing load times for 100+ enterprise users",
+          "Collaborated in Agile/Scrum teams to gather requirements, troubleshoot system issues, and deliver scalable internal web applications with continuous integration practices"
+        ],
+        "technologies": ["C#", ".NET", "Python", "SQL Server", "GitLab", "RESTful APIs", "Agile/Scrum"]
+      },
+      {
+        "company": "University of Texas at Austin",
+        "location": "Austin, TX",
+        "title": "Undergraduate Research Assistant",
+        "type": "Research",
+        "start_date": "Dec 2024",
+        "end_date": "May 2025",
+        "is_current": false,
+        "description": [
+          "Designed high-performance client/server architecture using CXL shared memory for distributed systems, implementing infrastructure as code for repeatable deployments",
+          "Developed multithreaded C++ applications with object-oriented design patterns, optimizing resource management and transaction retry policies"
+        ],
+        "technologies": ["C++", "CXL", "Distributed Systems"]
+      },
+      {
+        "company": "Medex Surgical",
+        "location": "Fort Worth, TX",
         "title": "Software Engineering Intern",
+        "type": "Internship",
         "start_date": "May 2024",
-        "end_date": "August 2024",
+        "end_date": "Aug 2024",
+        "is_current": false,
         "description": [
-          "Designed and deployed an inventory management database system to store inventory using Visual Basic for Applications and JavaScript, reducing manual errors by 30% and saving 15 hours weekly for operations.",
-          "Streamlined management of over 1.5K hospital items, improving inventory tracking accuracy across 100+ hospitals by 40%."
-        ]
-      },
-      {
-        "organization": "iCode, Southlake, TX",
-        "title": "Software Engineering Tutor",
-        "start_date": "May 2024",
-        "end_date": "August 2024",
-        "description": [
-          "Instructed lessons in Java, Python, and C++ to 20+ students, focusing on hands-on projects to build practical skills.",
-          "Identified and resolved a bug in the lesson progress tracking system, preventing a revenue loss of over $2K in profit.", "Maintained a 90% satisfaction rate by customizing lessons to meet individual needs and ensure active engagement."
-        ]
-      },
-      {
-        "organization": "Autonomous Robotics Laboratory, Austin, TX",
-        "title": "Research Fellow",
-        "start_date": "December 2023",
-        "end_date": "Present",
-        "description": [
-          "Collaborated in a team of 4 to develop a multi-robot human guidance system using Robot Operating System (ROS), Python, and C++, leveraging GPT-4o to enable robots to guide people throughout the laboratory building.",
-          "Tracked each robot’s real-time location using ROS, integrating it with structured GPT-4o prompts to deliver precise navigation and room directions within the building."
-        ]
+          "Designed and deployed an API development project for an inventory management system using Excel's VBA and JavaScript, improving visibility across 100+ hospitals in an Agile/DevOps environment.",
+          "Implemented CI/CD pipeline enhancements and workflow optimizations, reducing manual errors by 30% and saving users 15 hours/week"
+        ],
+        "technologies": ["VBA", "JavaScript", "CI/CD", "Agile/DevOps"]
       }
     ]
   },
   "projects": {
-    "section": {
-      "enable_section": true,
-      "title": "~/Projects",
-      "navbar_name": "/Projects",
-      "description": "Some of my most recent or past favorite creations or work."
-    },
-    "project_items": [
-    {
-      "use_git_api": false,
-      "api_github_repo_link": "",
-      "project_name": "Video Game Sales Prediction",
-      "description": [
-        "Worked in a team of 4 to develop a machine learning model using Python and Jupyter Notebook, aimed at predicting a game’s total global sales. Removed outliers, filled null values, and engineered new features using Pandas, NumPy, and Seaborn to uncover patterns driving global sales. Trained and optimized regression models through hyperparameter tuning, improving the R2 value by 83% from 0.24 to 0.44."
-      ],
-      "resources_used": [
-        "Python",
-        "Jupyter Notebook",
-        "scikit-learn"
-      ],
-      "start_date": "Nov 2024",
-      "end_date": "Dec 2024",
-      "links": [
-        {
-          "href": "https://github.com/SahirHameed/Video-Game-Sales-Prediction",
-          "icon": "FaGithub",
-          "data_tooltip": "Visit GitHub Repo"
-        }
-      ]
-    },
-    {
-      "use_git_api": false,
-      "api_github_repo_link": "",
-      "project_name": "Web Page Summarizer",
-      "description": [
-        "Developed a Chrome extension using JavaScript, HTML, and CSS, leveraging Open-AI’s GPT-3.5 Turbo to generate concise web page summaries. Created scripts to extract web page content and integrated Open-AI API for text summarization functionality."
-      ],
-      "resources_used": [
-        "JavaScript",
-        "OpenAI API"
-      ],
-      "start_date": "August 2024",
-      "end_date": "",
-      "links": [
-        {
-          "href": "https://github.com/SahirHameed/Web-Scraper-Summarizer",
-          "icon": "FaGithub",
-          "data_tooltip": "Visit GitHub Repo"
-        }
-      ]
-    },
-    {
-      "use_git_api": false,
-      "api_github_repo_link": "",
-      "project_name": "Pantry Management System",
-      "description": [
-        "Designed a full-stack application using Next.js, Firebase, and JavaScript for real-time pantry inventory tracking and secure user authentication. Integrated LLaMA AI to analyze inventory and provide tailored recipe suggestions for the user."
-      ],
-      "resources_used": [
-        "Next.js",
-        "JavaScript",
-        "Firebase",
-        "LLaMA"
-      ],
-      "start_date": "July 2024",
-      "end_date": "August 2024",
-      "links": [
-        {
-          "href": "https://github.com/SahirHameed/Pantry-Management",
-          "icon": "FaGithub",
-          "data_tooltip": "Visit GitHub Repo"
-        }
-      ]
-    },
-    {
-      "use_git_api": false,
-      "api_github_repo_link": "",
-      "project_name": "Recycle Detection Software",
-      "description": [
-        "Constructed a recycling detection algorithm in a team of 4, integrating YOLO-8, OpenCV, and GPT-4 to determine an object’s recyclability status. Led system testing using Azure Kinect video streams, achieving a detection accuracy of 78% on recyclable objects."
-      ],
-      "resources_used": [
-        "Python (YOLO-8)",
-        "OpenAI (GPT-4)"
-      ],
-      "start_date": "March 2023",
-      "end_date": "April 2023",
-      "links": [
-        {
-          "href": "https://github.com/milkman1015/FRI_One_Recycle_Detection",
-          "icon": "FaGithub",
-          "data_tooltip": "Visit GitHub Repo"
-        }
-      ]
-    }
-  ]
-},
-  "languages": {
-    "section": {
-      "enable_section": true,
-      "title": "~/Skills",
-      "navbar_name": "/skills",
-      "description": "Programming languages and software I am proficient in."
-    },
-    "language_items": [
-      { "name": "Java (Spring Boot)" },
-      { "name": "Python" },
-      { "name": "C++" },
-      { "name": "C" },
-      { "name": "JavaScript (React, Node)" },
-      { "name": "Ruby" },
-      { "name": "Swift" },
-      { "name": "SQL" }
-    ],
-    "framework_items": [
-      { "name": "AWS" },
-      { "name": "Docker" },
-      { "name": "TensorFlow" },
-      { "name": "Git" },
-      { "name": "Bash" },
-      { "name": "GCP" },
-      { "name": "Langchain" },
-      { "name": "Azure" }
+    "enable_section": true,
+    "section_id": "projects",
+    "title": "Things I've Made",
+    "subtitle": "Problems I've solved",
+    "items": [
+      {
+        "name": "Video Game Sales Prediction",
+        "description": "Collaborated in an Agile team of 4 to build and optimize a predictive model, improving R\u00b2 accuracy by 83% through hyperparameter tuning, iterative testing, and data-driven evaluation metrics. Integrated third-party APIs for data retrieval and implemented automated data processing pipelines.",
+        "technologies": ["Python", "Jupyter Notebook", "scikit-learn"],
+        "links": {
+          "github": "https://github.com/SahirHameed/Video-Game-Sales-Prediction",
+          "live": null
+        },
+        "featured": true,
+        "date": "December 2024"
+      },
+      {
+        "name": "Web Page Summarizer",
+        "description": "Developed Chrome extension utilizing RESTful API integration with OpenAI's GPT-3.5 Turbo for real-time web content summarization. Applied prompt engineering and LangChain framework to optimize API performance and response accuracy.",
+        "technologies": ["JavaScript", "OpenAI API", "LangChain"],
+        "links": {
+          "github": "https://github.com/SahirHameed/Web-Scraper-Summarizer",
+          "live": null
+        },
+        "featured": true,
+        "date": "August 2024"
+      }
     ]
   },
-  "footer": {
-    "line_one": "Designed by",
-    "copyright_line": "All rights reserved."
+  "skills": {
+    "enable_section": true,
+    "section_id": "skills",
+    "title": "My Toolkit",
+    "subtitle": "Technologies I work with",
+    "categories": [
+      {
+        "name": "Languages",
+        "items": ["Python", "Java", "C/C++", "C#", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS"]
+      },
+      {
+        "name": "Frameworks & Libraries",
+        "items": [".NET", "React.js", "Node.js", "Next.js"]
+      },
+      {
+        "name": "DevOps & Tools",
+        "items": ["Git (GitLab, GitHub)", "CI/CD Pipelines", "Docker", "DBeaver", "Agile/Scrum", "RESTful APIs", "AWS"]
+      },
+      {
+        "name": "Databases",
+        "items": ["SQL Server", "PostgreSQL", "MySQL", "Oracle SQL", "NoSQL"]
+      },
+      {
+        "name": "AI/ML Tools",
+        "items": ["LangChain", "OpenAI API", "TensorFlow", "GenAI Coding Assistants (Cline, Copilot, Claude)", "Prompt Engineering"]
+      }
+    ]
   },
-  "error_page": {
-    "title": "Error 404",
-    "description": "The page you are looking for does not exist. Chose one of the following links to continue."
+  "currently_into": {
+    "enable_section": true,
+    "section_id": "vibes",
+    "title": "Currently Into",
+    "subtitle": "What's on my radar right now",
+    "items": [
+      {
+        "category": "Building",
+        "title": "Document Automation @ LM",
+        "detail": "Full-stack lifecycle system with .NET, Python, and GitLab",
+        "icon": "code",
+        "hue": 20,
+        "progress": 70,
+        "is_live": true
+      },
+      {
+        "category": "Learning",
+        "title": "AI/ML Engineering",
+        "detail": "LangChain, prompt engineering, and GenAI tooling",
+        "icon": "brain",
+        "hue": 210,
+        "progress": 60,
+        "is_live": true
+      },
+      {
+        "category": "Building",
+        "title": "Seblea",
+        "detail": "College sublease platform — TypeScript, Supabase, RESTful APIs",
+        "icon": "rocket",
+        "hue": 280,
+        "progress": 40,
+        "is_live": true
+      },
+      {
+        "category": "Watching",
+        "title": "Anime Season",
+        "detail": "Keeping up with the latest drops",
+        "icon": "gamepad",
+        "hue": 340,
+        "progress": 100,
+        "is_live": false
+      },
+      {
+        "category": "Fitness",
+        "title": "Strength Training",
+        "detail": "Consistent gym routine — no days off",
+        "icon": "dumbbell",
+        "hue": 120,
+        "progress": 90,
+        "is_live": false
+      },
+      {
+        "category": "Exploring",
+        "title": "Cloud & DevOps",
+        "detail": "AWS, CI/CD pipelines, Docker, and infrastructure",
+        "icon": "rocket",
+        "hue": 45,
+        "progress": 65,
+        "is_live": true
+      }
+    ]
+  },
+  "contact": {
+    "enable_section": true,
+    "section_id": "contact",
+    "title": "Let's Connect",
+    "subtitle": "Build something together",
+    "description": "Have an idea? A question? Or just want to say hi? I'm always open to interesting conversations and new opportunities.",
+    "email": "sahirhameed@utexas.edu",
+    "cta_text": "Start a Conversation"
+  },
+  "footer": {
+    "copyright": "Sahir Hameed",
+    "built_with": "Crafted with curiosity"
+  },
+  "education": {
+    "items": [
+      {
+        "school": "The University of Texas at Austin",
+        "degree": "B.S. in Computer Science; Minor in Business",
+        "graduation_date": "Dec 2025",
+        "location": "Austin, TX",
+        "coursework": [
+          "Machine Learning",
+          "Computer Networks",
+          "Compilers",
+          "Modern Web Applications",
+          "Data Structures",
+          "Discrete Math",
+          "Algorithms and Complexity",
+          "Computer Architecture",
+          "Operating Systems",
+          "Autonomous Robotics"
+        ]
+      }
+    ]
   }
 }

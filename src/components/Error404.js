@@ -13,7 +13,7 @@ const Error404 = () => {
         Send us an e-mail about this error and try later.
       </p>
       <a href="/">Home page</a> |
-      <a href={contentData.general.navbar_social_links.github}>GitHub Page</a>
+      <a href={contentData.general.social_links.github}>GitHub Page</a>
     </div>
   );
 };

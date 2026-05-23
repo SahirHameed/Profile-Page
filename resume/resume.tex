@@ -1,0 +1,188 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Sahir Hameed} \\ \vspace{1pt}
+    \small Fort Worth, Texas $|$
+    \href{mailto:sahirhameed@utexas.edu}{\underline{sahirhameed@utexas.edu}} $|$
+    \href{https://www.linkedin.com/in/sahirhameed}{\underline{linkedin.com/in/sahirhameed}} $|$
+    \href{https://github.com/SahirHameed}{\underline{github.com/SahirHameed}}
+\end{center}
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, C/C++, C\#, JavaScript, TypeScript, SQL, HTML5, CSS} \\
+     \textbf{Frameworks \& Libraries}{: .NET, React.js, Node.js, Next.js} \\
+     \textbf{DevOps \& Tools}{: Git (GitLab, GitHub), CI/CD Pipelines, Docker, DBeaver, Agile/Scrum, RESTful APIs, AWS} \\
+     \textbf{Databases}{: SQL Server, PostgreSQL, MySQL, Oracle SQL, NoSQL} \\
+     \textbf{AI/ML Tools}{: LangChain, OpenAI API, TensorFlow, GenAI Coding Assistants (Cline, Copilot, Claude), Prompt Engineering} \\
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Lockheed Martin}{Remote}
+      {Data \& AI Engineer}{May 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architecting a full-stack document lifecycle automation system using C\# .NET, Python, and GitLab, implementing automated email notifications, archival workflows, and version-controlled repository storage for enterprise document management}
+        \resumeItem{Designed and deployed RESTful API integrations connecting SAP BusinessObjects WebI with GitLab repositories, enabling automated data extraction and migration for compliance and long-term storage}
+        \resumeItem{Developed Python automation scripts for data pipeline operations, backup procedures, and system integrations, reducing manual overhead by 20\% and improving operational efficiency}
+        \resumeItem{Optimized SQL Server queries and restructured database schemas, improving application performance by 30\% and reducing load times for 100+ enterprise users}
+        \resumeItem{Collaborated in Agile/Scrum teams to gather requirements, troubleshoot system issues, and deliver scalable internal web applications with continuous integration practices}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Texas at Austin}{Austin, TX}
+      {Undergraduate Research Assistant}{Dec 2024 -- May 2025}
+      \resumeItemListStart
+        \resumeItem{Designed high-performance client/server architecture using CXL shared memory for distributed systems, implementing infrastructure as code for repeatable deployments}
+        \resumeItem{Developed multithreaded C++ applications with object-oriented design patterns, optimizing resource management and transaction retry policies}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Medex Surgical}{Fort Worth, TX}
+      {Software Engineering Intern}{May 2024 -- Aug 2024}
+      \resumeItemListStart
+        \resumeItem{Designed and deployed an API development project for an inventory management system using Excel's VBA and JavaScript, improving visibility across 100+ hospitals in an Agile/DevOps environment.}
+        \resumeItem{Implemented CI/CD pipeline enhancements and workflow optimizations, reducing manual errors by 30\% and saving users 15 hours/week}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Seblea} $|$ \emph{TypeScript, Node.js, Supabase, RESTful API}}{\href{https://www.seblea.com}{\underline{Visit Website}}}
+          \resumeItemListStart
+            \resumeItem{Building Seblea, an all-in-one leasing and roommate finder application with Supabase database integration and RESTful API architecture, utilizing CI/CD pipelines and Git-based version control for automated deployment}
+            \resumeItem{Implementing responsive UI components with HTML5, CSS, and TypeScript to deliver an intuitive user experience for verified listings, roommate matching, and seamless lease management}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Video Game Sales Prediction} $|$ \emph{Python, Jupyter Notebook, scikit-learn}}{}
+          \resumeItemListStart
+            \resumeItem{Collaborated in an Agile team of 4 to build and optimize a predictive model, improving R\textsuperscript{2} accuracy by 83\% through hyperparameter tuning, iterative testing, and data-driven evaluation metrics}
+            \resumeItem{Integrated third-party APIs for data retrieval and implemented automated data processing pipelines to ensure accurate global sales predictions}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Web Page Summarizer} $|$ \emph{JavaScript, OpenAI API}}{}
+          \resumeItemListStart
+            \resumeItem{Developed Chrome extension utilizing RESTful API integration with OpenAI's GPT-3.5 Turbo for real-time web content summarization and enhanced user feedback mechanisms}
+            \resumeItem{Applied prompt engineering and LangChain framework to optimize API performance and response accuracy}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of Texas at Austin}{Austin, TX}
+      {B.S. in Computer Science; Minor in Business}{Dec 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Machine Learning, Computer Networks, Compilers, Modern Web Applications, Data Structures, Discrete Math, Algorithms and Complexity, Computer Architecture, Operating Systems, Autonomous Robotics}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
