@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTerminal } from 'react-icons/fa';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import content from '../../content.json';
 import Button from '../ui/Button';
@@ -23,7 +23,7 @@ const Navbar = () => {
 
   // Handle scroll state and active section detection
   useEffect(() => {
-    const sectionIds = ['about', 'experience', 'projects', 'skills', 'contact'];
+    const sectionIds = ['about', 'experience', 'projects', 'skills', 'vibes', 'contact'];
 
     const handleScroll = () => {
       // Update scrolled state
@@ -163,12 +163,32 @@ const Navbar = () => {
               >
                 Search anything...
               </button>
+              <button
+                className="navbar__mobile-cmd"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setTimeout(() => {
+                    window.dispatchEvent(new Event('openTerminal'));
+                  }, 300);
+                }}
+              >
+                <FaTerminal size={12} style={{ marginRight: '6px' }} />
+                Open Terminal
+              </button>
             </div>
           </div>
 
-          {/* Right - Theme Toggle + Social Icons + Cmd K */}
+          {/* Right - Theme Toggle + Social Icons + Cmd K + Terminal */}
           <div className="navbar__actions">
             <ThemeToggle />
+            <button
+              className="navbar__terminal-btn"
+              onClick={() => window.dispatchEvent(new Event('openTerminal'))}
+              aria-label="Open terminal"
+              title="Open terminal"
+            >
+              <FaTerminal size={13} />
+            </button>
             <button
               className="navbar__cmd-hint"
               onClick={() => window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }))}

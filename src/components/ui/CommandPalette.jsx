@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HiSearch } from 'react-icons/hi';
-import { FaRocket, FaUser, FaBriefcase, FaCode, FaTools, FaEnvelope, FaFileAlt, FaStar } from 'react-icons/fa';
+import { FaRocket, FaUser, FaBriefcase, FaCode, FaTools, FaEnvelope, FaFileAlt, FaStar, FaTerminal } from 'react-icons/fa';
 import content from '../../content.json';
 
 const buildSearchItems = () => {
@@ -16,6 +16,7 @@ const buildSearchItems = () => {
     { name: 'Skills', icon: <FaTools />, action: 'scroll', target: 'skills', category: 'Navigate' },
     { name: 'Contact', icon: <FaEnvelope />, action: 'scroll', target: 'contact', category: 'Navigate' },
     { name: 'Download Resume', icon: <FaFileAlt />, action: 'download', target: content.general.resume_url, category: 'Navigate' },
+    { name: 'Open Terminal', icon: <FaTerminal />, action: 'terminal', target: null, category: 'Navigate' },
   ];
   items.push(...sections);
 
@@ -133,6 +134,8 @@ const CommandPalette = () => {
       navigate(item.target);
     } else if (item.action === 'link') {
       window.open(item.target, '_blank', 'noopener,noreferrer');
+    } else if (item.action === 'terminal') {
+      setTimeout(() => window.dispatchEvent(new Event('openTerminal')), 100);
     }
   }, [navigate]);
 

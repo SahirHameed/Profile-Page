@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Layout Components
@@ -11,6 +11,8 @@ import About from "./components/sections/About";
 import Experience from "./components/sections/Experience";
 import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
+import CurrentlyInto from "./components/sections/CurrentlyInto";
+import GitHubActivity from "./components/sections/GitHubActivity";
 import Contact from "./components/sections/Contact";
 
 // UI Components
@@ -18,10 +20,12 @@ import AnimatedBackground from "./components/ui/AnimatedBackground";
 import Chatbot from "./components/ui/Chatbot";
 import BackToTop from "./components/ui/BackToTop";
 import CommandPalette from "./components/ui/CommandPalette";
+import LiveTerminal from "./components/ui/LiveTerminal";
 import MatrixRain from "./components/ui/MatrixRain";
 
 // Hooks
 import useKonamiCode from "./hooks/useKonamiCode";
+import usePageTitle from "./hooks/usePageTitle";
 
 // Other Pages
 import Error404 from "./components/Error404";
@@ -38,6 +42,15 @@ import "./styles/features.css";
 // Main page component
 const MainPage = () => {
   const { activated, dismiss } = useKonamiCode();
+  const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+  usePageTitle();
+
+  // Listen for custom event to open terminal
+  useEffect(() => {
+    const handler = () => setIsTerminalOpen(true);
+    window.addEventListener('openTerminal', handler);
+    return () => window.removeEventListener('openTerminal', handler);
+  }, []);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -89,6 +102,8 @@ const MainPage = () => {
           <Experience />
           <Projects />
           <Skills />
+          <CurrentlyInto />
+          <GitHubActivity />
           <Contact />
         </main>
 
@@ -97,6 +112,7 @@ const MainPage = () => {
 
       <Chatbot />
       <BackToTop />
+      <LiveTerminal isOpen={isTerminalOpen} onClose={() => setIsTerminalOpen(false)} />
       <MatrixRain active={activated} onDismiss={dismiss} />
     </div>
   );
