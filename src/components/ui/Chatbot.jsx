@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { HiX } from 'react-icons/hi';
-import { FaRobot, FaPaperPlane } from 'react-icons/fa';
+import { FaRobot, FaPaperPlane, FaFileAlt, FaCode, FaEnvelope } from 'react-icons/fa';
 import content from '../../content.json';
 
 const buildResponses = () => {
-  const { general, about, experience, projects, skills } = content;
+  const { general, about, experience, projects, skills, education } = content;
 
   const skillsList = skills.categories.map(c => `**${c.name}:** ${c.items.join(', ')}`).join('\n');
   const expList = experience.items.map(e =>
@@ -14,10 +14,18 @@ const buildResponses = () => {
     `**${p.name}** — ${p.description.slice(0, 80)}...`
   ).join('\n');
 
+  const edu = education.items[0];
+  const courseworkList = edu.coursework.join(', ');
+
   return {
     greeting: {
       text: `Hey! I'm Sahir's digital twin. Ask me anything about his background, skills, or what he's looking for. Or pick a question below!`,
-      followups: ['What are your skills?', 'Tell me about your experience', 'Are you open to new roles?']
+      followups: ['What are your skills?', 'Tell me about your experience', 'Are you open to new roles?'],
+      quickActions: [
+        { label: 'View Resume', icon: 'file', action: 'link', target: general.resume_url },
+        { label: 'Projects', icon: 'code', action: 'scroll', target: 'projects' },
+        { label: 'Contact', icon: 'email', action: 'scroll', target: 'contact' }
+      ]
     },
     patterns: [
       {
@@ -49,9 +57,9 @@ const buildResponses = () => {
         }
       },
       {
-        keywords: ['education', 'school', 'university', 'degree', 'study', 'college', 'major'],
+        keywords: ['education', 'school', 'university', 'degree', 'study', 'college', 'major', 'coursework', 'class'],
         response: {
-          text: `Sahir graduated from the **University of Texas at Austin** with a **BS in Computer Science** (Class of 2024). Hook 'em! 🤘`,
+          text: `Sahir graduated from **${edu.school}** with a **${edu.degree}** (${edu.graduation_date}).\n\n**Relevant Coursework:** ${courseworkList}`,
           followups: ['Tell me about your experience', 'What projects have you built?']
         }
       },
@@ -115,6 +123,33 @@ const matchResponse = (input, responses) => {
   return responses.fallback;
 };
 
+const renderMessageText = (text) => {
+  return text.split('\n').map((line, j) => (
+    <span key={j}>
+      {line.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/).map((part, k) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          return <strong key={k}>{part.slice(2, -2)}</strong>;
+        }
+        const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+        if (linkMatch) {
+          return <a key={k} href={linkMatch[2]} target="_blank" rel="noopener noreferrer" className="chatbot__link">{linkMatch[1]}</a>;
+        }
+        return part;
+      })}
+      {j < text.split('\n').length - 1 && <br />}
+    </span>
+  ));
+};
+
+const QuickActionIcon = ({ icon }) => {
+  switch (icon) {
+    case 'file': return <FaFileAlt size={14} />;
+    case 'code': return <FaCode size={14} />;
+    case 'email': return <FaEnvelope size={14} />;
+    default: return null;
+  }
+};
+
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -123,6 +158,34 @@ const Chatbot = () => {
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
   const responses = useRef(buildResponses()).current;
+
+  // Lock body scroll on mobile when chatbot is open
+  useEffect(() => {
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    if (isOpen && isMobile) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
+  // Handle iOS keyboard resize
+  useEffect(() => {
+    if (!isOpen || !window.visualViewport) return;
+
+    const handleResize = () => {
+      const isMobile = window.matchMedia('(max-width: 640px)').matches;
+      if (!isMobile) return;
+      const chatEl = document.querySelector('.chatbot--open');
+      if (chatEl) {
+        chatEl.style.height = `${window.visualViewport.height}px`;
+      }
+    };
+
+    window.visualViewport.addEventListener('resize', handleResize);
+    return () => window.visualViewport.removeEventListener('resize', handleResize);
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -138,7 +201,7 @@ const Chatbot = () => {
     if (isOpen) inputRef.current?.focus();
   }, [isOpen]);
 
-  const sendMessage = (text) => {
+  const sendMessage = useCallback((text) => {
     if (!text.trim()) return;
 
     const userMsg = { sender: 'user', text };
@@ -152,7 +215,7 @@ const Chatbot = () => {
       setIsTyping(false);
       setMessages(prev => [...prev, { sender: 'bot', ...matched }]);
     }, 600 + Math.random() * 800);
-  };
+  }, [responses]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -161,6 +224,20 @@ const Chatbot = () => {
 
   const handleFollowup = (q) => {
     sendMessage(q);
+  };
+
+  const handleQuickAction = (action) => {
+    if (action.action === 'link') {
+      window.open(action.target, '_blank');
+    } else if (action.action === 'scroll') {
+      setIsOpen(false);
+      setTimeout(() => {
+        const el = document.getElementById(action.target);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+    }
   };
 
   return (
@@ -203,17 +280,22 @@ const Chatbot = () => {
               )}
               <div className="chatbot__msg-bubble">
                 <div className="chatbot__msg-text">
-                  {msg.text.split('\n').map((line, j) => (
-                    <span key={j}>
-                      {line.split(/(\*\*.*?\*\*)/).map((part, k) =>
-                        part.startsWith('**') && part.endsWith('**')
-                          ? <strong key={k}>{part.slice(2, -2)}</strong>
-                          : part
-                      )}
-                      {j < msg.text.split('\n').length - 1 && <br />}
-                    </span>
-                  ))}
+                  {renderMessageText(msg.text)}
                 </div>
+                {msg.quickActions && (
+                  <div className="chatbot__quick-actions">
+                    {msg.quickActions.map((action, j) => (
+                      <button
+                        key={j}
+                        className="chatbot__quick-action"
+                        onClick={() => handleQuickAction(action)}
+                      >
+                        <QuickActionIcon icon={action.icon} />
+                        {action.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 {msg.followups && (
                   <div className="chatbot__followups">
                     {msg.followups.map((q, j) => (

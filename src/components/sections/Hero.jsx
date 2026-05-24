@@ -42,7 +42,11 @@ const Hero = () => {
       <TerminalBlock command="whoami">
         <Fade triggerOnce cascade damping={0.15}>
           <div className="term-whoami">
-            <div className="term-whoami__name">{hero.name}</div>
+            <div className="term-whoami__line">
+              <span className="term-json__key">name</span>
+              <span className="term-json__colon">: </span>
+              <span className="term-whoami__name">{hero.name}</span>
+            </div>
             <div className="term-whoami__line">
               <span className="term-json__key">motto</span>
               <span className="term-json__colon">: </span>

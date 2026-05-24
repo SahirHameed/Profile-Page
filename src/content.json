@@ -135,6 +135,17 @@
     "subtitle": "Problems I've solved",
     "items": [
       {
+        "name": "Seblea",
+        "description": "College sublease platform enabling students to find and list subleases with real-time listings, secure authentication, and a streamlined search experience built for the UT Austin community.",
+        "technologies": ["TypeScript", "Supabase", "RESTful APIs", "React"],
+        "links": {
+          "github": "https://github.com/SahirHameed",
+          "live": null
+        },
+        "featured": true,
+        "date": "2025"
+      },
+      {
         "name": "Video Game Sales Prediction",
         "description": "Collaborated in an Agile team of 4 to build and optimize a predictive model, improving R\u00b2 accuracy by 83% through hyperparameter tuning, iterative testing, and data-driven evaluation metrics. Integrated third-party APIs for data retrieval and implemented automated data processing pipelines.",
         "technologies": ["Python", "Jupyter Notebook", "scikit-learn"],
@@ -155,6 +166,17 @@
         },
         "featured": true,
         "date": "August 2024"
+      },
+      {
+        "name": "Personal Portfolio",
+        "description": "Terminal-themed portfolio website with custom chatbot, command palette (Cmd+K), scroll animations, and a fully JSON-driven content system for easy updates.",
+        "technologies": ["React", "CSS Custom Properties", "React Router"],
+        "links": {
+          "github": "https://github.com/SahirHameed",
+          "live": null
+        },
+        "featured": false,
+        "date": "2025"
       }
     ]
   },

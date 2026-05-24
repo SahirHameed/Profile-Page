@@ -39,13 +39,15 @@ const Experience = () => {
         return (
           <Fade key={index} triggerOnce direction="up" delay={index * 120} duration={600}>
             <div className="term-git-entry">
-              <div>
-                <span className="term-git-hash">{hash}</span>
-                {item.is_current && <span className="term-git-head">(HEAD)</span>}
+              <div className="term-git-header">
+                <div className="term-git-header-left">
+                  <span className="term-git-hash">{hash}</span>
+                  {item.is_current && <span className="term-git-head">(HEAD)</span>}
+                  <span className="term-git-company">{item.company}</span>
+                  {' — '}
+                  <span className="term-git-role">{item.title}</span>
+                </div>
                 <span className="term-git-date">{item.start_date} – {item.end_date || 'Present'}</span>
-                <span className="term-git-company">{item.company}</span>
-                {' — '}
-                <span className="term-git-role">{item.title}</span>
               </div>
 
               {visibleDesc.map((desc, i) => (

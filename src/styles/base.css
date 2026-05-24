@@ -339,6 +339,17 @@ button {
   }
 }
 
+/* Safe area insets for notched phones */
+@supports (padding: env(safe-area-inset-top)) {
+  .terminal-shell__titlebar {
+    padding-top: calc(12px + env(safe-area-inset-top, 0px));
+  }
+
+  .footer {
+    padding-bottom: calc(var(--space-10) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 /* Large screens — visible outer gap */
 @media (min-width: 1440px) {
   .app {

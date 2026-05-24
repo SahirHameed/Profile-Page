@@ -469,7 +469,7 @@
    ======================================== */
 
 .term-block {
-  padding: var(--space-6) var(--section-padding-x);
+  padding: var(--space-10) var(--section-padding-x);
   max-width: var(--container-xl);
   margin: 0 auto;
   position: relative;
@@ -580,6 +580,19 @@
   display: none;
 }
 
+.term-git-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.term-git-header-left {
+  flex: 1;
+  min-width: 0;
+}
+
 .term-git-hash {
   color: var(--accent-tertiary);
   margin-right: 8px;
@@ -587,7 +600,9 @@
 
 .term-git-date {
   color: var(--text-muted);
-  margin-right: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 13px;
 }
 
 .term-git-head {
@@ -607,7 +622,7 @@
 
 .term-git-bullet {
   padding-left: var(--space-4);
-  color: var(--text-secondary);
+  color: var(--accent-teal, #5db8a6);
   font-size: 13px;
   margin-top: var(--space-1);
   line-height: 1.6;
@@ -628,19 +643,21 @@
 /* ls style directory listing */
 .term-ls-entry {
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   gap: 0 var(--space-4);
-  padding: var(--space-2) 0;
+  padding: var(--space-3) var(--space-2);
   border-bottom: 1px solid var(--border-subtle);
   align-items: baseline;
   cursor: pointer;
   transition: background var(--transition-fast);
-  padding-left: var(--space-2);
-  padding-right: var(--space-2);
   border-radius: var(--radius-sm);
 }
 
 .term-ls-entry:hover {
+  background: var(--bg-card);
+}
+
+.term-ls-entry--expanded {
   background: var(--bg-card);
 }
 
@@ -649,14 +666,19 @@
   font-size: 12px;
 }
 
-.term-ls-date {
-  color: var(--text-muted);
-  font-size: 13px;
-}
-
 .term-ls-name {
   color: var(--accent-teal, #5db8a6);
   font-weight: 500;
+}
+
+.term-ls-expand-hint {
+  color: var(--text-muted);
+  font-size: 11px;
+  transition: color var(--transition-fast);
+}
+
+.term-ls-entry:hover .term-ls-expand-hint {
+  color: var(--accent-primary);
 }
 
 .term-ls-links {
@@ -677,13 +699,15 @@
 .term-ls-detail {
   grid-column: 1 / -1;
   padding: var(--space-3) var(--space-4);
-  color: var(--text-muted);
+  color: var(--accent-teal, #5db8a6);
   font-size: 13px;
   line-height: 1.6;
-  border-left: 2px solid var(--border-subtle);
-  margin-left: var(--space-2);
-  margin-top: var(--space-2);
+  border-left: 2px solid var(--accent-primary);
+  margin-left: var(--space-6);
+  margin-top: var(--space-3);
   margin-bottom: var(--space-2);
+  background: rgba(255, 107, 53, 0.03);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
 .term-ls-tech {
@@ -711,13 +735,13 @@
 }
 
 .term-yaml-inline-item {
-  color: var(--text-secondary);
+  color: var(--accent-teal, #5db8a6);
   transition: color var(--transition-fast);
   cursor: default;
 }
 
 .term-yaml-inline-item:hover {
-  color: var(--accent-teal, #5db8a6);
+  color: var(--text-primary);
 }
 
 .term-yaml-sep {
@@ -811,7 +835,7 @@
   font-family: var(--font-mono);
   font-size: 14px;
   line-height: 1.8;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-4);
 }
 
 .term-whoami__line {
@@ -819,12 +843,8 @@
 }
 
 .term-whoami__name {
-  font-size: 14px;
-  font-family: var(--font-mono);
   font-weight: 700;
   color: var(--accent-teal, #5db8a6);
-  line-height: 1.8;
-  padding-left: var(--space-6);
 }
 
 .term-hero-name {
@@ -902,11 +922,12 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
+  margin-top: calc(-1 * var(--space-4));
 }
 
 .term-about-image {
   width: 100%;
-  max-width: 320px;
+  max-width: min(320px, 100%);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-subtle);
   margin: 0 auto;
@@ -919,6 +940,7 @@
 
   .term-about-right {
     order: -1;
+    margin-top: 0;
   }
 
   .term-status-line {

@@ -16,6 +16,7 @@ import Contact from "./components/sections/Contact";
 // UI Components
 import AnimatedBackground from "./components/ui/AnimatedBackground";
 import Chatbot from "./components/ui/Chatbot";
+import BackToTop from "./components/ui/BackToTop";
 import CommandPalette from "./components/ui/CommandPalette";
 import MatrixRain from "./components/ui/MatrixRain";
 
@@ -95,6 +96,7 @@ const MainPage = () => {
       </div>
 
       <Chatbot />
+      <BackToTop />
       <MatrixRain active={activated} onDismiss={dismiss} />
     </div>
   );

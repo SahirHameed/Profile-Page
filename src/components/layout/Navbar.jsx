@@ -128,6 +128,42 @@ const Navbar = () => {
             <Button href={general.resume_url} variant="primary" size="sm" download>
               Resume
             </Button>
+
+            {/* Mobile-only actions */}
+            <div className="navbar__mobile-actions">
+              <ThemeToggle />
+              <div className="navbar__mobile-social">
+                <a
+                  href={general.social_links.github}
+                  className="icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <FaGithub size={20} />
+                </a>
+                <a
+                  href={general.social_links.linkedin}
+                  className="icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedin size={20} />
+                </a>
+              </div>
+              <button
+                className="navbar__mobile-cmd"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setTimeout(() => {
+                    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }));
+                  }, 300);
+                }}
+              >
+                Search anything...
+              </button>
+            </div>
           </div>
 
           {/* Right - Theme Toggle + Social Icons + Cmd K */}

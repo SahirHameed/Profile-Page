@@ -16,10 +16,10 @@ const Projects = () => {
     <TerminalBlock command="ls -la ~/projects/" id={projects.section_id}>
       {projects.items.map((project, i) => (
         <Fade key={i} triggerOnce direction="up" delay={i * 100} duration={500}>
-          <div className="term-ls-entry" onClick={() => toggle(i)}>
+          <div className={`term-ls-entry ${expanded[i] ? 'term-ls-entry--expanded' : ''}`} onClick={() => toggle(i)}>
             <span className="term-ls-perms">drwxr-xr-x</span>
-            <span className="term-ls-date">{project.date}</span>
             <span className="term-ls-name">{project.name}/</span>
+            <span className="term-ls-expand-hint">{expanded[i] ? '▾' : '▸'}</span>
             <span className="term-ls-links">
               {project.links.github && (
                 <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="term-ls-link" onClick={e => e.stopPropagation()}>
