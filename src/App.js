@@ -11,7 +11,6 @@ import About from "./components/sections/About";
 import Experience from "./components/sections/Experience";
 import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
-import CurrentlyInto from "./components/sections/CurrentlyInto";
 import GitHubActivity from "./components/sections/GitHubActivity";
 import Contact from "./components/sections/Contact";
 
@@ -102,7 +101,6 @@ const MainPage = () => {
           <Experience />
           <Projects />
           <Skills />
-          <CurrentlyInto />
           <GitHubActivity />
           <Contact />
         </main>

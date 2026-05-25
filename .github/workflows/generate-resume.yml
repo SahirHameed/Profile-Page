@@ -3,8 +3,6 @@ name: Sync Resume
 on:
   push:
     branches: [main]
-    paths:
-      - 'resume/resume.tex'
 
 jobs:
   sync-resume:

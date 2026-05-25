@@ -17,67 +17,65 @@ const timeAgo = (dateStr) => {
   return `${months}mo ago`;
 };
 
-const formatEvent = (event) => {
-  const repo = event.repo?.name?.replace(`${USERNAME}/`, '') || event.repo?.name;
-
-  switch (event.type) {
-    case 'PushEvent': {
-      const commits = event.payload?.commits || [];
-      const msg = commits.length > 0 ? commits[0].message.split('\n')[0] : 'pushed code';
-      return { type: 'push', repo, detail: msg, count: commits.length };
-    }
-    case 'CreateEvent':
-      return { type: 'create', repo, detail: `created ${event.payload?.ref_type || 'repo'}${event.payload?.ref ? ` "${event.payload.ref}"` : ''}` };
-    case 'WatchEvent':
-      return { type: 'star', repo, detail: 'starred' };
-    case 'ForkEvent':
-      return { type: 'fork', repo, detail: 'forked' };
-    case 'PullRequestEvent':
-      return { type: 'pr', repo, detail: `${event.payload?.action} PR: ${event.payload?.pull_request?.title || ''}` };
-    case 'IssuesEvent':
-      return { type: 'issue', repo, detail: `${event.payload?.action} issue: ${event.payload?.issue?.title || ''}` };
-    case 'DeleteEvent':
-      return { type: 'delete', repo, detail: `deleted ${event.payload?.ref_type} "${event.payload?.ref}"` };
-    default:
-      return { type: event.type.replace('Event', '').toLowerCase(), repo, detail: '' };
-  }
-};
-
 const GitHubActivity = () => {
-  const [events, setEvents] = useState([]);
+  const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const cached = sessionStorage.getItem('gh_events');
+    const cached = sessionStorage.getItem('gh_stats');
     if (cached) {
       try {
-        setEvents(JSON.parse(cached));
+        setStats(JSON.parse(cached));
         setLoading(false);
         return;
       } catch {}
     }
 
-    fetch(`https://api.github.com/users/${USERNAME}/events/public?per_page=8`)
-      .then(res => {
-        if (!res.ok) throw new Error(`GitHub API: ${res.status}`);
-        return res.json();
-      })
-      .then(data => {
-        const formatted = data.map(e => ({
-          ...formatEvent(e),
-          time: e.created_at,
-          id: e.id,
-        }));
-        setEvents(formatted);
-        sessionStorage.setItem('gh_events', JSON.stringify(formatted));
+    Promise.all([
+      fetch(`https://api.github.com/users/${USERNAME}`).then(r => {
+        if (!r.ok) throw new Error(`GitHub API: ${r.status}`);
+        return r.json();
+      }),
+      fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=100&sort=pushed`).then(r => {
+        if (!r.ok) throw new Error(`GitHub API: ${r.status}`);
+        return r.json();
+      }),
+    ])
+      .then(([user, repos]) => {
+        const totalStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+
+        // Aggregate languages
+        const langCount = {};
+        repos.forEach(r => {
+          if (r.language) {
+            langCount[r.language] = (langCount[r.language] || 0) + 1;
+          }
+        });
+        const topLangs = Object.entries(langCount)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 4)
+          .map(([lang]) => lang);
+
+        const lastPush = repos.length > 0 ? repos[0].pushed_at : null;
+
+        const result = {
+          publicRepos: user.public_repos,
+          followers: user.followers,
+          totalStars,
+          topLanguages: topLangs,
+          lastActive: lastPush,
+        };
+
+        setStats(result);
+        sessionStorage.setItem('gh_stats', JSON.stringify(result));
       })
       .catch(err => setError(err.message))
       .finally(() => setLoading(false));
   }, []);
 
   return (
-    <TerminalBlock command="git fetch --contributions" id="activity">
+    <TerminalBlock command="git log --stat" id="activity">
       {loading && (
         <div className="github-activity__loading">
           Fetching from github.com/{USERNAME}...
@@ -86,32 +84,36 @@ const GitHubActivity = () => {
 
       {error && (
         <div className="github-activity__error">
-          Unable to fetch activity — <a href={`https://github.com/${USERNAME}`} target="_blank" rel="noopener noreferrer">view on GitHub</a>
+          Unable to fetch stats — <a href={`https://github.com/${USERNAME}`} target="_blank" rel="noopener noreferrer">view on GitHub</a>
         </div>
       )}
 
-      {!loading && !error && (
-        <Fade triggerOnce cascade damping={0.06}>
-          {events.map((event) => (
-            <div key={event.id} className="github-activity__event">
-              <div className="github-activity__event-header">
-                <div>
-                  <span className="github-activity__event-type">{event.type}</span>
-                  {' '}
-                  <span className="github-activity__event-repo">{event.repo}</span>
-                </div>
-                <span className="github-activity__event-time">{timeAgo(event.time)}</span>
-              </div>
-              {event.detail && (
-                <div className="github-activity__event-detail">
-                  {event.type === 'push' && event.count > 1
-                    ? `${event.count} commits — ${event.detail}`
-                    : event.detail
-                  }
-                </div>
-              )}
+      {!loading && !error && stats && (
+        <Fade triggerOnce cascade damping={0.08}>
+          <div className="github-activity__stats">
+            <div className="github-activity__stat-row">
+              <span className="github-activity__stat-label">public repos</span>
+              <span className="github-activity__stat-value--accent">{stats.publicRepos}</span>
             </div>
-          ))}
+            <div className="github-activity__stat-row">
+              <span className="github-activity__stat-label">total stars</span>
+              <span className="github-activity__stat-value--accent">{stats.totalStars}</span>
+            </div>
+            <div className="github-activity__stat-row">
+              <span className="github-activity__stat-label">followers</span>
+              <span className="github-activity__stat-value">{stats.followers}</span>
+            </div>
+            <div className="github-activity__stat-row">
+              <span className="github-activity__stat-label">top languages</span>
+              <span className="github-activity__stat-value">{stats.topLanguages.join(', ')}</span>
+            </div>
+            {stats.lastActive && (
+              <div className="github-activity__stat-row">
+                <span className="github-activity__stat-label">last active</span>
+                <span className="github-activity__stat-value">{timeAgo(stats.lastActive)}</span>
+              </div>
+            )}
+          </div>
         </Fade>
       )}
     </TerminalBlock>

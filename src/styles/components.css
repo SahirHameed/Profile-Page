@@ -748,46 +748,6 @@
   color: var(--text-muted);
 }
 
-/* Status / progress bars */
-.term-status-line {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  gap: var(--space-3);
-  padding: var(--space-2) 0;
-  align-items: center;
-  font-size: 13px;
-}
-
-.term-status-category {
-  color: var(--text-muted);
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.05em;
-  min-width: 70px;
-}
-
-.term-status-title {
-  color: var(--text-primary);
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.term-status-bar {
-  font-family: var(--font-mono);
-  color: var(--accent-primary);
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.term-status-live {
-  color: #28c840;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
 
 /* Contact prompt */
 .term-contact-line {

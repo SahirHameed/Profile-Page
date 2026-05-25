@@ -208,68 +208,6 @@
       }
     ]
   },
-  "currently_into": {
-    "enable_section": true,
-    "section_id": "vibes",
-    "title": "Currently Into",
-    "subtitle": "What's on my radar right now",
-    "items": [
-      {
-        "category": "Building",
-        "title": "Document Automation @ LM",
-        "detail": "Full-stack lifecycle system with .NET, Python, and GitLab",
-        "icon": "code",
-        "hue": 20,
-        "progress": 70,
-        "is_live": true
-      },
-      {
-        "category": "Learning",
-        "title": "AI/ML Engineering",
-        "detail": "LangChain, prompt engineering, and GenAI tooling",
-        "icon": "brain",
-        "hue": 210,
-        "progress": 60,
-        "is_live": true
-      },
-      {
-        "category": "Building",
-        "title": "Seblea",
-        "detail": "College sublease platform — TypeScript, Supabase, RESTful APIs",
-        "icon": "rocket",
-        "hue": 280,
-        "progress": 40,
-        "is_live": true
-      },
-      {
-        "category": "Watching",
-        "title": "Anime Season",
-        "detail": "Keeping up with the latest drops",
-        "icon": "gamepad",
-        "hue": 340,
-        "progress": 100,
-        "is_live": false
-      },
-      {
-        "category": "Fitness",
-        "title": "Strength Training",
-        "detail": "Consistent gym routine — no days off",
-        "icon": "dumbbell",
-        "hue": 120,
-        "progress": 90,
-        "is_live": false
-      },
-      {
-        "category": "Exploring",
-        "title": "Cloud & DevOps",
-        "detail": "AWS, CI/CD pipelines, Docker, and infrastructure",
-        "icon": "rocket",
-        "hue": 45,
-        "progress": 65,
-        "is_live": true
-      }
-    ]
-  },
   "contact": {
     "enable_section": true,
     "section_id": "contact",
