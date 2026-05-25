@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { FaGithub, FaLinkedin, FaTerminal } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTerminal, FaGlobe } from 'react-icons/fa';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import content from '../../content.json';
 import Button from '../ui/Button';
@@ -151,6 +151,15 @@ const Navbar = () => {
                 >
                   <FaLinkedin size={20} />
                 </a>
+                <a
+                  href={general.social_links.website}
+                  className="icon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Website"
+                >
+                  <FaGlobe size={20} />
+                </a>
               </div>
               <button
                 className="navbar__mobile-cmd"
@@ -213,6 +222,15 @@ const Navbar = () => {
               aria-label="LinkedIn"
             >
               <FaLinkedin />
+            </a>
+            <a
+              href={general.social_links.website}
+              className="icon-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Website"
+            >
+              <FaGlobe />
             </a>
           </div>
 
