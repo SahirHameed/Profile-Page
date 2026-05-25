@@ -17,6 +17,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\newcommand{\tul}[1]{%
+  \underline{\smash{#1}\vphantom{y}}\vphantom{#1}%
+}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -95,10 +98,10 @@
 \begin{center}
     \textbf{\Huge \scshape Sahir Hameed} \\ \vspace{1pt}
     \small Fort Worth, Texas $|$
-    \href{mailto:sahirhameed@utexas.edu}{\underline{sahirhameed@utexas.edu}} $|$
-    \href{https://www.linkedin.com/in/sahirhameed}{\underline{linkedin.com/in/sahirhameed}} $|$
-    \href{https://github.com/SahirHameed}{\underline{github.com/SahirHameed}} $|$
-    \href{https://sahirhameed.com}{\underline{sahirhameed.com}}
+    \href{mailto:sahirhameed@utexas.edu}{\tul{sahirhameed@utexas.edu}} $|$
+    \href{https://www.linkedin.com/in/sahirhameed}{\tul{linkedin.com/in/sahirhameed}} $|$
+    \href{https://github.com/SahirHameed}{\tul{github.com/SahirHameed}} $|$
+    \href{https://sahirhameed.com}{\tul{sahirhameed.com}}
 \end{center}
 
 
@@ -153,7 +156,7 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Seblea} $|$ \emph{TypeScript, Node.js, Supabase, RESTful API}}{\href{https://www.seblea.com}{\underline{Visit Website}}}
+          {\textbf{Seblea} $|$ \emph{TypeScript, Node.js, Supabase, RESTful API}}{\href{https://www.seblea.com}{\tul{Visit Website}}}
           \resumeItemListStart
             \resumeItem{Building Seblea, an all-in-one leasing and roommate finder application with Supabase database integration and RESTful API architecture, utilizing CI/CD pipelines and Git-based version control for automated deployment}
             \resumeItem{Implementing responsive UI components with HTML5, CSS, and TypeScript to deliver an intuitive user experience for verified listings, roommate matching, and seamless lease management}

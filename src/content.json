@@ -97,7 +97,15 @@
           "Optimized SQL Server queries and restructured database schemas, improving application performance by 30% and reducing load times for 100+ enterprise users",
           "Collaborated in Agile/Scrum teams to gather requirements, troubleshoot system issues, and deliver scalable internal web applications with continuous integration practices"
         ],
-        "technologies": ["C#", ".NET", "Python", "SQL Server", "GitLab", "RESTful APIs", "Agile/Scrum"]
+        "technologies": [
+          "C#",
+          ".NET",
+          "Python",
+          "SQL Server",
+          "GitLab",
+          "RESTful APIs",
+          "Agile/Scrum"
+        ]
       },
       {
         "company": "University of Texas at Austin",
@@ -111,7 +119,11 @@
           "Designed high-performance client/server architecture using CXL shared memory for distributed systems, implementing infrastructure as code for repeatable deployments",
           "Developed multithreaded C++ applications with object-oriented design patterns, optimizing resource management and transaction retry policies"
         ],
-        "technologies": ["C++", "CXL", "Distributed Systems"]
+        "technologies": [
+          "C++",
+          "CXL",
+          "Distributed Systems"
+        ]
       },
       {
         "company": "Medex Surgical",
@@ -125,7 +137,12 @@
           "Designed and deployed an API development project for an inventory management system using Excel's VBA and JavaScript, improving visibility across 100+ hospitals in an Agile/DevOps environment.",
           "Implemented CI/CD pipeline enhancements and workflow optimizations, reducing manual errors by 30% and saving users 15 hours/week"
         ],
-        "technologies": ["VBA", "JavaScript", "CI/CD", "Agile/DevOps"]
+        "technologies": [
+          "VBA",
+          "JavaScript",
+          "CI/CD",
+          "Agile/DevOps"
+        ]
       }
     ]
   },
@@ -137,41 +154,57 @@
     "items": [
       {
         "name": "Seblea",
-        "description": "College sublease platform enabling students to find and list subleases with real-time listings, secure authentication, and a streamlined search experience built for the UT Austin community.",
-        "technologies": ["TypeScript", "Supabase", "RESTful APIs", "React"],
+        "description": "Building Seblea, an all-in-one leasing and roommate finder application with Supabase database integration and RESTful API architecture, utilizing CI/CD pipelines and Git-based version control for automated deployment Implementing responsive UI components with HTML5, CSS, and TypeScript to deliver an intuitive user experience for verified listings, roommate matching, and seamless lease management",
+        "technologies": [
+          "TypeScript",
+          "Node.js",
+          "Supabase",
+          "RESTful API"
+        ],
         "links": {
           "github": "https://github.com/SahirHameed",
           "live": null
         },
         "featured": true,
-        "date": "2025"
+        "date": "\\href{https://www.seblea.com}{\\tul{Visit Website}}"
       },
       {
         "name": "Video Game Sales Prediction",
-        "description": "Collaborated in an Agile team of 4 to build and optimize a predictive model, improving R\u00b2 accuracy by 83% through hyperparameter tuning, iterative testing, and data-driven evaluation metrics. Integrated third-party APIs for data retrieval and implemented automated data processing pipelines.",
-        "technologies": ["Python", "Jupyter Notebook", "scikit-learn"],
+        "description": "Collaborated in an Agile team of 4 to build and optimize a predictive model, improving R2 accuracy by 83% through hyperparameter tuning, iterative testing, and data-driven evaluation metrics Integrated third-party APIs for data retrieval and implemented automated data processing pipelines to ensure accurate global sales predictions",
+        "technologies": [
+          "Python",
+          "Jupyter Notebook",
+          "scikit-learn"
+        ],
         "links": {
           "github": "https://github.com/SahirHameed/Video-Game-Sales-Prediction",
           "live": null
         },
         "featured": true,
-        "date": "December 2024"
+        "date": ""
       },
       {
         "name": "Web Page Summarizer",
-        "description": "Developed Chrome extension utilizing RESTful API integration with OpenAI's GPT-3.5 Turbo for real-time web content summarization. Applied prompt engineering and LangChain framework to optimize API performance and response accuracy.",
-        "technologies": ["JavaScript", "OpenAI API", "LangChain"],
+        "description": "Developed Chrome extension utilizing RESTful API integration with OpenAI's GPT-3.5 Turbo for real-time web content summarization and enhanced user feedback mechanisms Applied prompt engineering and LangChain framework to optimize API performance and response accuracy",
+        "technologies": [
+          "JavaScript",
+          "OpenAI API"
+        ],
         "links": {
           "github": "https://github.com/SahirHameed/Web-Scraper-Summarizer",
           "live": null
         },
         "featured": true,
-        "date": "August 2024"
+        "date": ""
       },
       {
         "name": "Personal Portfolio",
         "description": "Terminal-themed portfolio website with custom chatbot, command palette (Cmd+K), scroll animations, and a fully JSON-driven content system for easy updates.",
-        "technologies": ["React", "CSS Custom Properties", "React Router"],
+        "technologies": [
+          "React",
+          "CSS Custom Properties",
+          "React Router"
+        ],
         "links": {
           "github": "https://github.com/SahirHameed",
           "live": null
@@ -189,23 +222,58 @@
     "categories": [
       {
         "name": "Languages",
-        "items": ["Python", "Java", "C/C++", "C#", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS"]
+        "items": [
+          "Python",
+          "Java",
+          "C/C++",
+          "C#",
+          "JavaScript",
+          "TypeScript",
+          "SQL",
+          "HTML5",
+          "CSS"
+        ]
       },
       {
         "name": "Frameworks & Libraries",
-        "items": [".NET", "React.js", "Node.js", "Next.js"]
+        "items": [
+          ".NET",
+          "React.js",
+          "Node.js",
+          "Next.js"
+        ]
       },
       {
         "name": "DevOps & Tools",
-        "items": ["Git (GitLab, GitHub)", "CI/CD Pipelines", "Docker", "DBeaver", "Agile/Scrum", "RESTful APIs", "AWS"]
+        "items": [
+          "Git (GitLab, GitHub)",
+          "CI/CD Pipelines",
+          "Docker",
+          "DBeaver",
+          "Agile/Scrum",
+          "RESTful APIs",
+          "AWS"
+        ]
       },
       {
         "name": "Databases",
-        "items": ["SQL Server", "PostgreSQL", "MySQL", "Oracle SQL", "NoSQL"]
+        "items": [
+          "SQL Server",
+          "PostgreSQL",
+          "MySQL",
+          "Oracle SQL",
+          "NoSQL"
+        ]
       },
       {
         "name": "AI/ML Tools",
-        "items": ["LangChain", "OpenAI API", "TensorFlow", "GenAI Coding Assistants (Cline, Copilot, Claude)", "Prompt Engineering"]
+        "items": [
+          "LangChain",
+          "OpenAI API",
+          "TensorFlow",
+          "GenAI Coding Assistants (Cline, Copilot, Claude)",
+          "Prompt Engineering"
+        ]
       }
     ]
   },
