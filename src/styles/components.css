@@ -588,6 +588,13 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 640px) {
+  .term-git-header {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}
+
 .term-git-header-left {
   flex: 1;
   min-width: 0;
